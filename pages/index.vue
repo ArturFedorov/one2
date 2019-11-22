@@ -1,38 +1,14 @@
 <template>
   <div class="container">
     <div>
-      <logo />
-      <h1 class="title">
-        one2
-      </h1>
-      <h2 class="subtitle">
-        My posh Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <img src="~/assets/images/girl.png" alt="girl" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue"
-import Logo from "~/components/Logo.vue"
-
-export default Vue.extend({
-  components: {
-    Logo
-  }
-})
+export default Vue.extend({})
 </script>
 
 <style>
