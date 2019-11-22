@@ -9,11 +9,7 @@
         My posh Nuxt.js project
       </h2>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
+        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
           Documentation
         </a>
         <a
@@ -29,14 +25,14 @@
 </template>
 
 <script lang="ts">
-import Logo from '~/components/Logo.vue'
+import Vue from "vue"
+import Logo from "~/components/Logo.vue"
 
-import Vue from 'vue';
-  export default Vue.extend({
-    components: {
-      Logo
-    }
-  });
+export default Vue.extend({
+  components: {
+    Logo
+  }
+})
 </script>
 
 <style>
@@ -50,8 +46,8 @@ import Vue from 'vue';
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
