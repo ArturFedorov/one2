@@ -28,14 +28,15 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Logo from '~/components/Logo.vue'
 
-export default {
-  components: {
-    Logo
-  }
-}
+import Vue from 'vue';
+  export default Vue.extend({
+    components: {
+      Logo
+    }
+  });
 </script>
 
 <style>
