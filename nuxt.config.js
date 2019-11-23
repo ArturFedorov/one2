@@ -26,6 +26,9 @@ module.exports = {
   css: [
     '~/assets/styles/styles.scss'
   ],
+  // styleResources: {
+  //   scss: ['@/assets/styles/base/variables.scss']
+  // },
   /*
    ** Plugins to load before mounting the App
    */

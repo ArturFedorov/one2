@@ -1,9 +1,21 @@
 // Typography
 $font-family: 'FuturaPT';
 
+$font-size-base: 24px;
+$line-height-base: 1.2;
+
 // font-weights
 $font-thin: 100;
 $font-regular: 400;
 $font-medium: 500;
 $font-bold: 700;
 $font-ultra: 900;
+
+//colors
+$black: #333333;
+$red: #FA1F26;
+$gray: #E4E3DD;
+$white: #FFFFFF;
+
+$h1-text-shadow: 4px 4px 0 $red;
+$h2-text-shadow: 3px 3px 0 $red;
