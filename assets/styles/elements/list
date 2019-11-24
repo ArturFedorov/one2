@@ -1,0 +1,23 @@
+.list-o2 {
+  display: flex;
+  flex-direction: column;
+
+
+  &-item {
+    display: flex;
+    align-items: center;
+
+    &-image {
+      line-height: 0;
+    }
+
+    .text {
+      padding-left: 24px;
+      color: $white;
+      font-family: futura-pt;
+      font-weight: $font-light;
+      font-size: $font-size-base;
+      line-height: 0;
+    }
+  }
+}

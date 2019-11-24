@@ -20,12 +20,17 @@
           alt="girl" />
       </div>
     </div>
+    <Microphones class="home-mics"/>
   </div>
 </template>
 
 <script lang="ts">
   import Vue from 'vue';
+  import Microphones from '../components/landing/Microphones.vue';
   export default Vue.extend({
+    components: {
+      Microphones
+    },
     head: {
       link: [{ rel: 'stylesheet', href: 'https://use.typekit.net/hjm4myz.css' }]
     }
@@ -38,6 +43,7 @@
 .container {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
 }
 
 .home {
@@ -108,23 +114,9 @@
     max-width: 480px;
     line-height: 120%;
   }
-}
 
-@keyframes slideUp {
-   0% {
-     margin-top: 30px;
-   }
-   100% {
-     margin-top: 0;
-   }
- }
-
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+  &-mics {
+    margin-top: 150px;
   }
 }
 
