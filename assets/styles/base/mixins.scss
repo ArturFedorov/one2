@@ -1,0 +1,31 @@
+@mixin resetBtn {
+  box-shadow: none;
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  display: inline-block;
+}
+
+@mixin basicTransition {
+  transition: all .3s ease-in-out;
+}
+
+@mixin visuallyHidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+@mixin defaultOutline {
+  outline: $util dotted 1px;
+}
+
+@mixin resetA {
+  border-bottom: 0;
+
+  &:hover {
+    border-bottom-color: inherit;
+  }
+}
