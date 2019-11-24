@@ -11,6 +11,10 @@ body {
   font-family: futura-pt, Arial, sans-serif;
   font-size: $font-size-base;
   font-weight: $font-regular;
+
+  @media($mobile) {
+    font-size: 14px;
+  }
 }
 
 h1,
@@ -27,6 +31,19 @@ h2,
   font-size: 48px;
   font-weight: $font-bold;
   margin: 0 0 .47em;
+
+  @media($mobile) {
+    font-size: 36px;
+    margin: 0 0 .07em;
+  }
+
+  &.with-shadow {
+    text-shadow: $h2-text-shadow;
+
+    @media($mobile) {
+      text-shadow: $h2-text-shadow-mobile;
+    }
+  }
 }
 
 h3,

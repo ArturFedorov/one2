@@ -1,91 +1,131 @@
 <template>
-  <div class="container home">
-    <div class="home-section left">
-      <h1 class="h2">ONE SECOND</h1>
-      <p class="text home-text">
-        New type of online services where artists can get
-        professional support in recording & distribution,
-        promoting music, get funding for projects
-      </p>
-    </div>
-    <div class="home-section right">
-      <img
-        class="home-circles"
-        src="~/assets/base-icons/lines-circle-half.svg"
-        alt="lines" />
-      <img
-        class="home-image"
-        src="~/assets/images/girl.png"
-        alt="girl" />
-      <img
-        class="home-dots"
-        src="~/assets/base-icons/dots-red.svg"
-        alt="dots" />
+  <div class="container">
+    <div class="home">
+      <div class="home-section left">
+        <h2 class="h2 with-shadow">
+          ONE SECOND
+        </h2>
+        <p class="text home-text">
+          New type of online services where artists can get professional support
+          in recording & distribution, promoting music, get funding for projects
+        </p>
+        <a class="button-o2 home-button">
+          join one second
+        </a>
+      </div>
+      <div class="home-section right">
+        <img
+          class="home-image"
+          src="~/assets/images/girl2.png"
+          alt="girl" />
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue"
-export default Vue.extend({
-  head: {
-    link: [
-      { rel: "  stylesheet", href: "https://use.typekit.net/hjm4myz.css" }
-    ]
-  }
-})
+  import Vue from 'vue';
+  export default Vue.extend({
+    head: {
+      link: [{ rel: 'stylesheet', href: 'https://use.typekit.net/hjm4myz.css' }]
+    }
+  });
 </script>
 
 <style scoped lang="scss">
-  @import "../assets/styles/base/variables";
+@import "../assets/styles/base/variables";
 
-  .container {
-    min-height: 100vh;
-    display: flex;
+.container {
+  min-height: 100vh;
+  display: flex;
+}
+
+.home {
+  display: flex;
+  width: 100%;
+
+  @media($tablet) {
+    flex-direction: column-reverse;
+    overflow-x: hidden;
   }
 
-  .h2 {
-    text-shadow: $h2-text-shadow;
+  @media($mobile) {
+    width: 100%;
+    overflow-x: hidden;
   }
 
-  .home {
-    &-section {
-      flex: 1;
-      position: relative;
-      align-items: center;
+  &-section {
+    flex: 1;
+    position: relative;
+    align-items: center;
 
-      &.left {
-        padding-top: 150px;
+    &.left {
+      padding-top: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      animation: opacity 1s ease-in-out;
+
+      @media($tablet) {
+        padding: 250px 40px 0 40px;
       }
 
-      &.right {
-        justify-self: flex-end;
+      @media($mobile) {
+        padding: 40px 20px 0 20px;
       }
     }
+  }
 
-    &-circles {
-      position: absolute;
-      top: 0;
-      left: -33%;
-      z-index: 0;
+  &-button {
+    margin-top: 80px;
+
+    @media($tablet) {
+      margin-top: 40px;
     }
 
-    &-image {
-      position: absolute;
-      top: 50px;
-      right: -40px;
-      z-index: 1;
-    }
-
-    &-dots {
-      position: absolute;
-      z-index: 0;
-      bottom: 10%;
-      right: -40%;
-    }
-
-    &-text {
-      max-width: 480px;
+    @media($mobile) {
+      margin-top: 30px;
     }
   }
+
+  &-image {
+    position: absolute;
+    left: -240px;
+    min-width: 1140px;
+    animation: slideUp 1s ease-in-out, opacity 1.5s ease-in-out;
+
+    @media($tablet) {
+      left: -190px;
+    }
+
+    @media($mobile) {
+      min-width: 150%;
+      left: -80px;
+    }
+  }
+
+  &-text {
+    max-width: 480px;
+    line-height: 120%;
+  }
+}
+
+@keyframes slideUp {
+   0% {
+     margin-top: 30px;
+   }
+   100% {
+     margin-top: 0;
+   }
+ }
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 </style>

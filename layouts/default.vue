@@ -5,12 +5,12 @@
   </div>
 </template>
 <script lang="ts">
-import Vue from "vue"
-import Header from "~/components/root/Header.vue"
+  import Vue from 'vue';
+  import Header from '~/components/root/Header.vue';
 
-export default Vue.extend({
-  components: {
-    Header
-  }
-})
+  export default Vue.extend({
+    components: {
+      Header
+    }
+  });
 </script>

@@ -1,0 +1,13 @@
+.button-o2 {
+  text-transform: uppercase;
+  border-radius: 0;
+  border: none;
+  background-color: $red;
+  color: $white;
+  font-size: $font-size-base;
+  padding: 0.5em 1em;
+
+  @media($mobile) {
+    font-size: $font-size-base/2;
+  }
+}

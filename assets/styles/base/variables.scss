@@ -19,3 +19,13 @@ $white: #FFFFFF;
 
 $h1-text-shadow: 4px 4px 0 $red;
 $h2-text-shadow: 3px 3px 0 $red;
+$h2-text-shadow-mobile: 2px 2px 0 $red;
+
+
+// media queries
+$mobile: 'max-width: 767px';
+$tablet: 'max-width: 1023px';
+$desktop: 'max-width: 1279px';
+$wide-desktop: 'max-width: 1499px';
+$large-desktop: 'max-width: 1799px';
+

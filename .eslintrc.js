@@ -11,8 +11,8 @@ module.exports = {
     'eslint:recommended',
     // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
     // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-    'plugin:vue/recommended',
-    //'plugin:prettier/recommended',
+    //'plugin:vue/recommended',
+   //'plugin:prettier/recommended',
     '@nuxtjs/eslint-config-typescript'
   ],
   // required to lint *.vue files
@@ -21,10 +21,14 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    "quotes": ["error", "double"],
-    'semi': [2, 'never'],
+    "quotes": ["error", "single"],
+    "indent": "off",
+    'semi': [1, 'always'],
     'no-console': 'off',
     'vue/max-attributes-per-line': 'off',
-   // 'prettier/prettier': ['error', { 'semi': false }]
+    'vue/script-indent': ['warn', 2, {
+      'baseIndent': 1
+    }]
+    //'prettier/prettier': ['error', { 'semi': true }]
   }
 }
