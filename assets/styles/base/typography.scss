@@ -1,5 +1,5 @@
 body {
-  font-family: $font-family, Arial, sans-serif;
+  font-family: futura-pt, Arial, sans-serif;
   font-size: $font-size-base;
   font-weight: $font-regular;
   line-height: $line-height-base;
@@ -76,7 +76,7 @@ h6,
 
 a {
   color: $black;
-  font-family: 'Futura PT';
+  font-family: 'futura-pt';
   font-weight: $font-medium;
   text-decoration: none;
   @include basicTransition;

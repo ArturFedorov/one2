@@ -67,6 +67,7 @@ $header-height: 120px;
     &-link {
       color: $black;
       font-size: $font-size-base;
+      font-weight: $font-medium;
       margin-left: 50px;
 
       @media($mobile) {
