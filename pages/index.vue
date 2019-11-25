@@ -73,11 +73,13 @@
       animation: opacity 1s ease-in-out;
 
       @media($tablet) {
-        padding: 250px 40px 0 40px;
+        margin-top: 630px;
+        padding: 0 40px;
       }
 
       @media($mobile) {
-        padding: 40px 20px 0 20px;
+        margin-top: 320px;
+        padding: 0 20px 0 20px;
       }
     }
   }
@@ -106,13 +108,18 @@
 
     @media($mobile) {
       min-width: 150%;
-      left: -80px;
+      max-width: 150%;
+      left: 0;
+      transform: translateX(-16%);
     }
   }
 
   &-text {
     max-width: 480px;
     line-height: 120%;
+    @media($mobile) {
+      max-width: 300px;
+    }
   }
 
   &-mics {

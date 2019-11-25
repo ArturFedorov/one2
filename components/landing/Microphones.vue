@@ -18,15 +18,15 @@
         </h2>
         <div class="list-o2 microphone-list">
           <div
-            class="list-o2-item microphone-list-item"
             v-for="item in items"
-            :key="item">
+            :key="item"
+            class="list-o2-item microphone-list-item">
             <img
               class="list-o2-image"
               src="~/assets/icons/disc.svg"
-              alt="disc">
+              alt="disc" />
             <p class="text">
-              {{item}}
+              {{ item }}
             </p>
           </div>
           <div class="microphone-button">
@@ -61,6 +61,9 @@
 
 <style scoped lang="scss">
   @import "../../assets/styles/base/variables";
+  $microphone-width: 740px;
+  $microphone-width-tablet: 640px;
+  $microphone-width-mobile: 240px;
 
   .microphone {
     position: relative;
@@ -90,24 +93,56 @@
     }
 
     &-mics {
-      min-width: 740px;
-      margin-left: -150px;
+      min-width: $microphone-width;
+      margin-left: -($microphone-width/4);
+
+      @media($tablet) {
+        min-width: $microphone-width-tablet;
+        max-width: $microphone-width-tablet;
+        margin-left: 0;
+      }
+
+      @media($mobile) {
+        min-width: $microphone-width-mobile;
+        max-width: 320px;
+        margin-left: 0;
+      }
     }
 
     &-header {
       line-height: 100%;
       color: $white;
-      margin-bottom: 80px;
-      font-size: 46px;
+      margin-bottom: $building-unit-x10;
+      font-size: $building-unit-x5;
+
+      @media($mobile) {
+        font-size: $building-unit-x3;
+        margin-bottom: $building-unit-x5;
+      }
     }
 
     &-image {
       flex: 1;
       padding-top: 100px;
+      align-self: center;
+
+      @media($tablet) {
+        padding-top: 0;
+        margin-top: -$building-unit-x5;
+      }
+
+      @media($mobile) {
+        padding-top: 0;
+        margin-top: -$building-unit-x5;
+      }
     }
 
     &-button {
-      margin-top: 50px;
+      margin-top: $building-unit-x6;
+
+      @media($mobile) {
+        margin-top: $building-unit-x3;
+      }
     }
 
     &-list {
@@ -116,18 +151,31 @@
         flex: 1;
         background-color: $red;
         opacity: .9;
-        padding: 40px 30px 40px 65px;
+        padding: $building-unit-x5 30px $building-unit-x5 65px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        @media($tablet) {
+          margin: -($building-unit-x12*3) $building-unit 0 $building-unit;
+        }
+
+        @media($mobile) {
+          margin: -($building-unit-x12 * 2) $building-unit 0 $building-unit;
+          padding: $building-unit-x3 30px $building-unit-x3 65px;
+        }
       }
 
       &-item {
-        margin-bottom: 30px;
+        margin-bottom: $building-unit-x4;
         margin-left: -42px;
 
         &:last-child {
           margin-bottom: 0;
+        }
+
+        @media($mobile) {
+          margin-bottom: $building-unit-x2;
         }
       }
     }

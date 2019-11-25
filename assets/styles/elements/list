@@ -12,12 +12,17 @@
     }
 
     .text {
-      padding-left: 24px;
+      padding-left: $building-unit-x3;
       color: $white;
       font-family: futura-pt;
-      font-weight: $font-light;
+      font-weight: $font-regular;
       font-size: $font-size-base;
       line-height: 0;
+
+      @media ($mobile) {
+        font-size: $building-unit-x2;
+        font-weight: $font-regular;
+      }
     }
   }
 }
