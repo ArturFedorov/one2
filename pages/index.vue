@@ -21,14 +21,17 @@
       </div>
     </div>
     <Microphones class="home-mics"/>
+    <Database class="home-database" />
   </div>
 </template>
 
 <script lang="ts">
   import Vue from 'vue';
   import Microphones from '../components/landing/Microphones.vue';
+  import Database from '../components/landing/Database.vue';
   export default Vue.extend({
     components: {
+      Database,
       Microphones
     },
     head: {
@@ -44,6 +47,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .home {
@@ -78,7 +82,7 @@
       }
 
       @media($mobile) {
-        margin-top: 320px;
+        margin-top: 380px;
         padding: 0 20px 0 20px;
       }
     }

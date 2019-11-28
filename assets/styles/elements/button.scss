@@ -15,4 +15,12 @@
     background-color: $white;
     color: $red;
   }
+
+  &.is-black {
+    background-color: $black;
+
+    &:hover {
+      color: $white;
+    }
+  }
 }
