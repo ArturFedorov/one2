@@ -53,7 +53,7 @@
     data () {
       return {
         items: [
-          'introduce yourself',
+          'introduce yourself ',
           'upload your music videos or audio',
           'get funding for recording,  shows and tours',
           'get free distribution',
