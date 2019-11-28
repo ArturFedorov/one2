@@ -1,17 +1,24 @@
 <template>
-  <div class="microphone">
+  <div
+    class="microphone">
     <img
       class="microphone-bg"
       src="~/assets/images/stripes.png"
       alt="stripes">
-    <div class="microphone-container">
+    <div
+      id="microphones"
+      class="microphone-container"
+      v-vpshow>
       <div class="microphone-image">
         <img
           class="microphone-mics"
           src="~/assets/images/mics.png"
           alt="mics">
       </div>
-      <div class="microphone-list-container">
+      <div
+        id="container"
+        class="microphone-list-container"
+        v-vpshow>
         <h2 class="h2 microphone-header">
           EVERYONES WHO NEEDS TO
           BOOST UP A MUSIC CAREER
@@ -64,6 +71,7 @@
   $microphone-width: 740px;
   $microphone-width-tablet: 640px;
   $microphone-width-mobile: 240px;
+  $microphone-container-top: 400px;
 
   .microphone {
     position: relative;
@@ -147,7 +155,7 @@
 
     &-list {
       &-container {
-        margin-top: 400px;
+        margin-top: $microphone-container-top;
         flex: 1;
         background-color: $red;
         opacity: .9;
@@ -178,6 +186,24 @@
           margin-bottom: $building-unit-x2;
         }
       }
+    }
+  }
+
+  // animations
+  .before-enter-container {
+    animation: none;
+  }
+
+  .enter-container {
+    animation: slideUp 1s ease-in-out, opacity 1.5s ease-in-out;
+  }
+
+  @keyframes slideUp {
+    0% {
+      margin-top: $microphone-container-top + 30px;
+    }
+    100% {
+      margin-top: $microphone-container-top;
     }
   }
 </style>

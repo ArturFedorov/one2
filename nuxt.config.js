@@ -30,7 +30,9 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    '~/shared/directives/scroll.directive.ts'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
