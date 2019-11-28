@@ -1,0 +1,28 @@
+.list-o2 {
+  display: flex;
+  flex-direction: column;
+
+
+  &-item {
+    display: flex;
+    align-items: center;
+
+    &-image {
+      line-height: 0;
+    }
+
+    .text {
+      padding-left: $building-unit-x3;
+      color: $white;
+      font-family: futura-pt;
+      font-weight: $font-regular;
+      font-size: $font-size-base;
+      line-height: 0;
+
+      @media ($mobile) {
+        font-size: $building-unit-x2;
+        font-weight: $font-regular;
+      }
+    }
+  }
+}

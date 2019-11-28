@@ -10,4 +10,9 @@
   @media($mobile) {
     font-size: $font-size-base/2;
   }
+
+  &.is-white {
+    background-color: $white;
+    color: $red;
+  }
 }

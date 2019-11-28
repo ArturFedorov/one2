@@ -6,6 +6,7 @@ $line-height-base: 1.2;
 
 // font-weights
 $font-thin: 100;
+$font-light: 300;
 $font-regular: 400;
 $font-medium: 500;
 $font-bold: 700;
@@ -28,4 +29,20 @@ $tablet: 'max-width: 1023px';
 $desktop: 'max-width: 1279px';
 $wide-desktop: 'max-width: 1499px';
 $large-desktop: 'max-width: 1799px';
+
+// Building Units
+$building-unit: 8px;
+$building-unit-x0_5: $building-unit / 2; // 4px
+$building-unit-x2: $building-unit * 2; // 16px
+$building-unit-x3: $building-unit * 3; // 24px
+$building-unit-x4: $building-unit * 4; // 32px
+$building-unit-x5: $building-unit * 5; // 40px
+$building-unit-x6: $building-unit * 6; // 48px
+$building-unit-x7: $building-unit * 7; // 56px
+$building-unit-x8: $building-unit * 8; // 64px
+$building-unit-x9: $building-unit * 9; // 72px
+$building-unit-x10: $building-unit * 10; // 80px
+$building-unit-x11: $building-unit * 11; // 88px
+$building-unit-x12: $building-unit * 12; // 96px
+
 
