@@ -11,11 +11,16 @@
           src="~/assets/images/mobileBg-small.png"
           alt="mobile">
         <img
+          id="image"
           class="mobile-image"
           src="~/assets/images/mobile.png"
-          alt="mobile">
+          alt="mobile"
+          v-vpshow>
       </div>
-      <div class="mobile-content-section is-right">
+      <div
+        id="mobile"
+        class="mobile-content-section is-right"
+        v-vpshow>
         <h2 class="h2 with-shadow">
           WATCH YOUR NUMBERS
         </h2>
@@ -105,6 +110,32 @@
           }
         }
       }
+    }
+  }
+
+  // animations
+  .before-enter-mobile {
+    animation: none;
+  }
+
+  .enter-mobile {
+    animation: slideUp 1s ease-in-out, opacity 1.5s ease-in-out;
+  }
+
+  .before-enter-image {
+    tanimation: none;
+  }
+
+  .enter-image {
+    animation: slideLeft 1s ease-in-out;
+  }
+
+  @keyframes slideLeft {
+    0% {
+      margin-left: -1000px;
+    }
+    100% {
+      margin-left: 0;
     }
   }
 </style>
