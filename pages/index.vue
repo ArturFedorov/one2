@@ -1,38 +1,45 @@
 <template>
-  <div class="container">
-    <div class="home">
-      <div class="home-section left">
-        <h2 class="h2 with-shadow">
-          ONE SECOND
-        </h2>
-        <p class="text home-text">
-          New type of online services where artists can get professional support
-          in recording & distribution, promoting music, get funding for projects
-        </p>
-        <a class="button-o2 home-button">
-          join one second
-        </a>
-      </div>
-      <div class="home-section right">
-        <img
-          class="home-image"
-          src="~/assets/images/girl2.png"
-          alt="girl" />
-      </div>
-    </div>
-    <Microphones class="home-mics"/>
-    <Database class="home-database" />
-  </div>
+ <div class="main">
+   <div class="container">
+     <div class="home">
+       <div class="home-section left">
+         <h2 class="h2 with-shadow">
+           ONE SECOND
+         </h2>
+         <p class="text home-text">
+           New type of online services where artists can get professional support
+           in recording & distribution, promoting music, get funding for projects
+         </p>
+         <a class="button-o2 home-button">
+           join one second
+         </a>
+       </div>
+       <div class="home-section right">
+         <img
+           class="home-image"
+           src="~/assets/images/girl2.png"
+           alt="girl" />
+       </div>
+     </div>
+     <Microphones class="home-mics"/>
+     <Database class="home-database" />
+   </div>
+   <div>
+     <Mobile class="home-mobile" />
+   </div>
+ </div>
 </template>
 
 <script lang="ts">
   import Vue from 'vue';
   import Microphones from '../components/landing/Microphones.vue';
   import Database from '../components/landing/Database.vue';
+  import Mobile from '../components/landing/Mobile.vue';
   export default Vue.extend({
     components: {
       Database,
-      Microphones
+      Microphones,
+      Mobile
     },
     head: {
       link: [{ rel: 'stylesheet', href: 'https://use.typekit.net/hjm4myz.css' }]
@@ -43,11 +50,17 @@
 <style scoped lang="scss">
 @import "../assets/styles/base/variables";
 
+.main {
+  @media($mobile) {
+    overflow-x: hidden;
+  }
+
+}
+
 .container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  //overflow-x: hidden;
 }
 
 .home {
@@ -63,6 +76,20 @@
     width: 100%;
     overflow-x: hidden;
   }
+
+  // components sections
+
+  &-mics {
+    margin-top: 150px;
+  }
+
+  &-mobile {
+    margin-top: 250px;
+    @media($mobile) {
+      margin-top: 150px;
+    }
+  }
+  // components sections
 
   &-section {
     flex: 1;
@@ -124,10 +151,6 @@
     @media($mobile) {
       max-width: 300px;
     }
-  }
-
-  &-mics {
-    margin-top: 150px;
   }
 }
 
