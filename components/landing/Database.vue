@@ -91,6 +91,12 @@
       }
     }
 
+    &-header {
+      @media($mobile) {
+        line-height: 100%;
+      }
+    }
+
     &-text {
       display: flex;
       width: 100%;
@@ -98,7 +104,7 @@
       padding: 0 $building-unit-x6 0 $building-unit-x4;
 
       @media($mobile) {
-        padding: 0;
+        padding: $building-unit_x0_5 0 0 3px;
       }
     }
 

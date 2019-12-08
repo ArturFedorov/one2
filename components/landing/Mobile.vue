@@ -21,7 +21,7 @@
         id="mobile"
         class="mobile-content-section is-right"
         v-vpshow>
-        <h2 class="h2 with-shadow">
+        <h2 class="h2 with-shadow mobile-header">
           WATCH YOUR NUMBERS
         </h2>
         <p class="text mobile-text">
@@ -71,7 +71,7 @@
         @media($mobile) {
           display: block;
           position: absolute;
-          z-index: -1;
+          z-index: 0;
           width: 100%;
           transform: translateY(50%);
         }
@@ -81,6 +81,7 @@
     &-text {
       margin-bottom: $building-unit-x10;
       @media($mobile) {
+        margin-top: $building-unit_x2;
         margin-bottom: $building-unit-x5;
       }
     }
@@ -88,6 +89,14 @@
     &-image {
       @media($mobile) {
         max-width: 300px;
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    &-header {
+      @media($mobile) {
+       line-height: 100%;
       }
     }
 
