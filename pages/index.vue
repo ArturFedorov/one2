@@ -27,7 +27,7 @@
    <div>
      <Mobile class="home-mobile" />
      <Promo class="home-promo" />
-     <!--<Artists class="home-artists"/>-->
+     <Artists class="home-artists"/>
    </div>
  </div>
 </template>
@@ -35,13 +35,13 @@
 <script lang="ts">
   import Vue from 'vue';
   import Microphones from '../components/landing/Microphones.vue';
-  // import Artists from '../components/landing/Artists.vue';
+  import Artists from '../components/landing/Artists.vue';
   import Database from '../components/landing/Database.vue';
   import Mobile from '../components/landing/Mobile.vue';
   import Promo from '../components/landing/Promo.vue';
   export default Vue.extend({
     components: {
-     // Artists,
+      Artists,
       Database,
       Microphones,
       Mobile,

@@ -41,6 +41,8 @@ h1,
     text-shadow: $h1-text-shadow;
 
     @media($mobile) {
+      font-size: 36px;
+      margin: 0 0 .07em;
       text-shadow: $h2-text-shadow-mobile;
     }
   }

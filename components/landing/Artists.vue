@@ -37,8 +37,22 @@
       position: absolute;
       line-height: $line-height;
       max-width: 900px;
-      right: 0;
-      top: calc(920px/2 - 380px/2)
+      right: $building-unit-x12;
+      top: calc(920px/2 - 380px/2);
+
+      @media($mobile) {
+        top: 70px;
+        right: $building-unit-x2;
+        line-height: 24px;
+        max-width: 200px;
+        .h1 {
+          font-size: 24px;
+
+          &-reversed {
+            text-shadow: $h1-text-shadow-white-mobile;
+          }
+        }
+      }
     }
   }
 
@@ -46,7 +60,21 @@
     &-header {
       position: absolute;
       top: 33%;
+      left: $building-unit-x12;
       line-height: $line-height;
+
+      @media($mobile) {
+        top: 35%;
+        left: $building-unit-x4;
+        line-height: 24px;
+        .h1 {
+          font-size: 24px;
+
+          &-reversed {
+            text-shadow: $h1-text-shadow-black-mobile;
+          }
+        }
+      }
     }
   }
 </style>
