@@ -132,7 +132,7 @@
   }
 
   .before-enter-image {
-    tanimation: none;
+    animation: none;
   }
 
   .enter-image {

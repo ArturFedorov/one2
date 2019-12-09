@@ -23,6 +23,27 @@ h1,
   font-size: 120px;
   font-weight: $font-bold;
   margin: 0 0 .6em;
+
+  &-reversed {
+    color: $red;
+    text-shadow: $h1-text-shadow-reversed;
+  }
+
+  &-white {
+    color: $white;
+
+    .h1-reversed {
+      text-shadow: $h1-text-shadow-white;
+    }
+  }
+
+  &.with-shadow {
+    text-shadow: $h1-text-shadow;
+
+    @media($mobile) {
+      text-shadow: $h2-text-shadow-mobile;
+    }
+  }
 }
 
 h2,
@@ -31,6 +52,11 @@ h2,
   font-size: 48px;
   font-weight: $font-bold;
   margin: 0 0 .47em;
+
+  &-reversed {
+    color: $red;
+    text-shadow: $h2-text-shadow-reversed;
+  }
 
   @media($mobile) {
     font-size: 36px;

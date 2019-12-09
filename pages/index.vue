@@ -26,6 +26,8 @@
    </div>
    <div>
      <Mobile class="home-mobile" />
+     <Promo class="home-promo" />
+     <!--<Artists class="home-artists"/>-->
    </div>
  </div>
 </template>
@@ -33,13 +35,17 @@
 <script lang="ts">
   import Vue from 'vue';
   import Microphones from '../components/landing/Microphones.vue';
+  // import Artists from '../components/landing/Artists.vue';
   import Database from '../components/landing/Database.vue';
   import Mobile from '../components/landing/Mobile.vue';
+  import Promo from '../components/landing/Promo.vue';
   export default Vue.extend({
     components: {
+     // Artists,
       Database,
       Microphones,
-      Mobile
+      Mobile,
+      Promo
     },
     head: {
       link: [{ rel: 'stylesheet', href: 'https://use.typekit.net/hjm4myz.css' }]
@@ -88,6 +94,17 @@
     @media($mobile) {
       margin-top: 150px;
     }
+  }
+
+  &-promo {
+    margin-top: 100px;
+    @media($mobile) {
+      margin-top: 50px;
+    }
+  }
+
+  &-artists {
+    margin-top: 100px;
   }
   // components sections
 
