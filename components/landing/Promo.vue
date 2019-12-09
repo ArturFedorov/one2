@@ -53,8 +53,7 @@
     &-content {
       display: flex;
       @media($mobile) {
-        //flex-direction: column;
-        max-width: 300px;
+        max-width: 100%;
         overflow-x: auto;
       }
       &-section {
