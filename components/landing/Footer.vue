@@ -1,6 +1,9 @@
 <template>
   <div class="footer">
-    <div class="container footer-content">
+    <div
+      id="content"
+      class="container footer-content"
+      v-vpshow>
       <div class="footer-image">
         <img
           src="~/assets/images/one2.png"
@@ -15,7 +18,8 @@
        <p class="text is-red">All rights reserved</p>
      </div>
     </div>
-    <div class="footer-bg">
+    <div
+      class="footer-bg">
       <img
         class="footer-ball"
         src="~/assets/images/red-ball-half.png"
@@ -83,5 +87,13 @@
         }
       }
     }
+  }
+
+  .before-enter-content {
+    animation: none;
+  }
+
+  .enter-content {
+    animation: slideUp 1s ease-in-out, opacity 1.5s ease-in-out;
   }
 </style>
