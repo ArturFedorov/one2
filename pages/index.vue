@@ -28,6 +28,7 @@
      <Mobile class="home-mobile" />
      <Promo class="home-promo" />
      <Artists class="home-artists"/>
+     <Footer class="home-footer"/>
    </div>
  </div>
 </template>
@@ -39,10 +40,12 @@
   import Database from '../components/landing/Database.vue';
   import Mobile from '../components/landing/Mobile.vue';
   import Promo from '../components/landing/Promo.vue';
+  import Footer from '../components/landing/Footer.vue';
   export default Vue.extend({
     components: {
       Artists,
       Database,
+      Footer,
       Microphones,
       Mobile,
       Promo

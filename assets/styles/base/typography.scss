@@ -16,6 +16,10 @@ body {
     color: $white;
   }
 
+  &.is-red {
+    color: $red;
+  }
+
   @media($mobile) {
     font-size: 14px;
   }
