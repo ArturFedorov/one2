@@ -105,6 +105,9 @@
 
   &-artists {
     margin-top: 100px;
+    @media($mobile) {
+      margin-top: 50px;
+    }
   }
   // components sections
 

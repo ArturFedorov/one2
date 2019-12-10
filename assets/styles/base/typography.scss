@@ -12,6 +12,10 @@ body {
   font-size: $font-size-base;
   font-weight: $font-regular;
 
+  &.is-white {
+    color: $white;
+  }
+
   @media($mobile) {
     font-size: 14px;
   }
@@ -58,6 +62,10 @@ h2,
   &-reversed {
     color: $red;
     text-shadow: $h2-text-shadow-reversed;
+  }
+
+  &.is-white {
+    color: $white;
   }
 
   @media($mobile) {
@@ -135,6 +143,10 @@ ul {
 ol {
   margin: 0 0 0 1em;
   padding: 0;
+}
+
+.is-medium {
+  font-weight: $font-medium;
 }
 
 

@@ -19,6 +19,29 @@
         or experienced artists
       </h1>
     </div>
+    <div class="investors-text">
+      <h2 class="h2 is-white investors-text-header">
+        GET BUSINESS OPPORTUNITIES
+        WITH ARTISTS YOU LIKE
+      </h2>
+      <div class="investors-list">
+        <p class="text is-white is-medium investors-list-item">
+          Buy up to 50% in projects of fresh or experiencd artists
+        </p>
+        <p class="text is-white is-medium investors-list-item">
+          Share risks with other investors
+        </p>
+        <p class="text is-white is-medium investors-list-item">
+          We moderate content
+        </p>
+        <p class="text is-white is-medium investors-list-item">
+          Use our coins to invest in music industry
+        </p>
+      </div>
+      <a class="button-o2 investors-button">
+        find out more
+      </a>
+    </div>
   </div>
 </template>
 
@@ -76,5 +99,42 @@
         }
       }
     }
+
+    &-text {
+      position: absolute;
+      bottom: 23%;
+      left: $building-unit-x12 + $building-unit_x7;
+      @media($mobile) {
+        bottom: 23%;
+        left: $building-unit_x4;
+      }
+
+      &-header {
+        max-width: 800px;
+        line-height: 100%;
+        margin-bottom: $building-unit-x8;
+        @media($mobile) {
+          font-size: $building-unit-x2;
+          max-width: 200px;
+        }
+      }
+    }
+
+    &-list {
+      margin-bottom: $building-unit-x12*2;
+      @media($mobile) {
+        display: none;
+      }
+      &-item:not(:last-child) {
+        margin-bottom: $building-unit-x2;
+      }
+    }
+
+    &-button {
+      @media($mobile) {
+        display: none;
+      }
+    }
+
   }
 </style>
