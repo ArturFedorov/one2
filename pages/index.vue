@@ -49,9 +49,6 @@
       Microphones,
       Mobile,
       Promo
-    },
-    head: {
-      link: [{ rel: 'stylesheet', href: 'https://use.typekit.net/hjm4myz.css' }]
     }
   });
 </script>

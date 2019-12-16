@@ -8,13 +8,19 @@
     </div>
     <div class="header-section right">
       <nav class="header-navigation">
-        <nuxt-link class="header-navigation-link is-uppercase" to="/">
+        <nuxt-link
+          class="header-navigation-link is-uppercase"
+          to="/artists">
           Artists
         </nuxt-link>
-        <nuxt-link class="header-navigation-link is-uppercase" to="/">
+        <nuxt-link
+          class="header-navigation-link is-uppercase"
+          to="/invest">
           Invest
         </nuxt-link>
-        <nuxt-link class="header-navigation-link is-uppercase" to="/">
+        <nuxt-link
+          class="header-navigation-link is-uppercase"
+          to="/about">
           About Us
         </nuxt-link>
       </nav>
@@ -69,6 +75,14 @@ $header-height: 120px;
       font-size: $font-size-base;
       font-weight: $font-medium;
       margin-left: 50px;
+
+      &-active {
+        font-weight: $font-bold;
+
+        &-exact {
+          font-weight: $font-bold;
+        }
+      }
 
       @media($mobile) {
         font-size: $font-size-base/2;

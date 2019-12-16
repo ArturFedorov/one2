@@ -34,6 +34,10 @@ module.exports = {
   plugins: [
     '~/shared/directives/scroll.directive.ts'
   ],
+  router: {
+    linkActiveClass: 'header-navigation-link-active',
+    linkExactActiveClass: 'header-navigation-link-active-exact',
+  },
   /*
    ** Nuxt.js dev-modules
    */
