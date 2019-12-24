@@ -71,7 +71,6 @@
 
     &-image {
       position: relative;
-      animation: opacity .5s ease-in-out;
     }
 
     &-circles {

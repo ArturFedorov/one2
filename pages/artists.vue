@@ -29,6 +29,7 @@
     }
 
     &-offer {
+      margin-top: -240px;
       margin-bottom: $building-unit-x10*3;
     }
   }

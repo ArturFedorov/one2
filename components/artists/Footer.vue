@@ -4,13 +4,28 @@
       id="content"
       class="footer-o2-content"
       v-vpshow>
+      <div>
+        <img
+          class="footer-o2-one2"
+          src="~/assets/images/one2.png"
+          alt="one2" />
+      </div>
       <div class="footer-o2-links">
         <a class="text is-white is-uppercase">About us</a>
         <a class="text is-white is-uppercase">Artists</a>
         <a class="text is-white is-uppercase">Invest</a>
       </div>
+      <div class="footer-o2-rights">
+        <p class="text is-white">All rights reserved</p>
+      </div>
     </div>
-    <img src="~/assets/images/footer-artists.png" alt="footer"/>
+    <img
+      src="~/assets/images/car_logo.png"
+      alt="footer"/>
+    <img
+      class="footer-o2-ball"
+      src="~/assets/images/artists_elipse.png"
+      alt="elipse">
   </div>
 </template>
 
@@ -26,11 +41,38 @@
 
   .footer-o2 {
     position: relative;
+    height: 800px;
+    background-color: $red;
+
+    @media($mobile) {
+      height: 400px;
+    }
+
     &-content {
       position: absolute;
       right: 10%;
       display: flex;
-      top: 20%;
+      top: 0;
+      flex-direction: column;
+      align-items: flex-end;
+      height: 100%;
+      padding-top: $building-unit-x7;
+      z-index: 2;
+    }
+
+    &-ball {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    &-one2 {
+      margin-bottom: 120px;
+    }
+
+    &-rights {
+      margin-top: auto;
+      padding-bottom: $building-unit-x4;
     }
 
     &-links {

@@ -4,7 +4,10 @@
       class="offer-bg"
       src="~/assets/icons/triangles.svg"
       alt="triangles">
-    <div class="container">
+    <div
+      class="container"
+      id="offer"
+      v-vpshow>
       <h1 class="h1 with-shadow is-uppercase offer-header">
         We provide you with
       </h1>
@@ -101,5 +104,14 @@
         }
       }
     }
+  }
+
+  // animations
+  .before-enter-offer {
+    animation: none;
+  }
+
+  .enter-offer {
+    animation: slideUp 1s ease-in-out, opacity 1.5s ease-in-out;
   }
 </style>

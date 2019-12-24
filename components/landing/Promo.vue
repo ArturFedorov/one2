@@ -96,13 +96,4 @@
   .enter-text {
     animation: slideUp 1s ease-in-out, opacity 1.5s ease-in-out;
   }
-
-  @keyframes slideRight {
-    0% {
-      transform: translateX(1000px);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
 </style>

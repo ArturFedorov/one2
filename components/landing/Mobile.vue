@@ -138,13 +138,4 @@
   .enter-image {
     animation: slideLeft 1s ease-in-out;
   }
-
-  @keyframes slideLeft {
-    0% {
-      margin-left: -1000px;
-    }
-    100% {
-      margin-left: 0;
-    }
-  }
 </style>
