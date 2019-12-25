@@ -37,7 +37,7 @@ module.exports = {
     '~/shared/directives/scroll.directive.ts'
   ],
   router: {
-    base:  development ? '/' : '/onesecond.cc/',
+    //base:  development ? '/' : '/onesecond.cc/',
     linkActiveClass: 'header-navigation-link-active',
     linkExactActiveClass: 'header-navigation-link-active-exact',
   },
