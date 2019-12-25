@@ -48,19 +48,34 @@
       position: relative;
       z-index: -1;
       margin-top: -230px;
+      @media($mobile) {
+        margin-top: -100px;
+      }
+
     }
     &-header {
       max-width: 90%;
+      @media($mobile) {
+        font-size: 28px;
+        max-width: 100%;
+      }
     }
 
     &-content {
       position: relative;
       padding: $building-unit-x6 0;
       background-color: $black;
+      @media($mobile) {
+        padding: $building-unit-x3;
+      }
     }
 
     &-logo {
       margin-top: $building-unit-x6;
+      @media($mobile) {
+        width: 40px;
+        margin-top: $building-unit-x2;
+      }
     }
 
     &-circles {
@@ -68,6 +83,9 @@
       bottom: 0;
       right: 0;
       z-index: 0;
+      @media($mobile) {
+        display: none;
+      }
     }
   }
 

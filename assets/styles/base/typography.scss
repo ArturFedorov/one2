@@ -63,6 +63,11 @@ h2,
   font-weight: $font-bold;
   margin: 0 0 .47em;
 
+  &.is-medium {
+    font-weight: $font-medium;
+    font-family: futura-pt;
+  }
+
   &-reversed {
     color: $red;
     text-shadow: $h2-text-shadow-reversed;

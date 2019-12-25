@@ -40,7 +40,7 @@
   import Database from '../components/landing/Database.vue';
   import Mobile from '../components/landing/Mobile.vue';
   import Promo from '../components/landing/Promo.vue';
-  import Footer from '../components/landing/Footer.vue';
+  import Footer from '../components/landing/Footer/Footer.vue';
   export default Vue.extend({
     components: {
       Artists,

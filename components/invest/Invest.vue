@@ -37,6 +37,9 @@
     &-header {
       margin-bottom: $building-unit;
       line-height: 100%;
+      @media($mobile) {
+        margin-bottom: $building-unit-x0_5;
+      }
     }
 
     &-text {
@@ -44,6 +47,11 @@
       font-weight: $font-medium;
       line-height: 100%;
       margin-bottom: $building-unit-x10;
+
+      @media($mobile) {
+        font-size: 18px;
+        margin-bottom: $building-unit-x4;
+      }
     }
 
     &-capture {
@@ -52,6 +60,9 @@
       width: 100%;
       text-align: center;
       animation: slideUp 1s ease-in-out, opacity 1.5s ease-in-out;
+      @media($mobile) {
+        top: 50%;
+      }
     }
   }
 
