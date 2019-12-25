@@ -1,3 +1,5 @@
+let development = process.env.NODE_ENV !== 'production'
+
 module.exports = {
   mode: 'universal',
   /*
@@ -35,6 +37,7 @@ module.exports = {
     '~/shared/directives/scroll.directive.ts'
   ],
   router: {
+    base:  development ? '/' : '/onesecond.cc/',
     linkActiveClass: 'header-navigation-link-active',
     linkExactActiveClass: 'header-navigation-link-active-exact',
   },
