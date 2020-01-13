@@ -78,7 +78,7 @@
       margin-bottom: 120px;
       @media($mobile) {
         max-width: 50px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
     }
 
@@ -86,7 +86,6 @@
       margin-top: auto;
       padding-bottom: $building-unit-x4;
       @media($mobile) {
-        padding-bottom: $building-unit-x2;
       }
     }
 
