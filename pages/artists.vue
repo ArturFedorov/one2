@@ -31,6 +31,10 @@
     &-offer {
       margin-top: -240px;
       margin-bottom: $building-unit-x10*3;
+      @media($mobile) {
+        margin-top: 200px;
+        margin-bottom: $building-unit-x10;
+      }
     }
   }
 </style>

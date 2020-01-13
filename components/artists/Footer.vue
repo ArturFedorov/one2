@@ -20,6 +20,7 @@
       </div>
     </div>
     <img
+      class="footer-o2-car"
       src="~/assets/images/car_logo.png"
       alt="footer"/>
     <img
@@ -45,7 +46,7 @@
     background-color: $red;
 
     @media($mobile) {
-      height: 400px;
+      height: 249px;
     }
 
     &-content {
@@ -58,21 +59,35 @@
       height: 100%;
       padding-top: $building-unit-x7;
       z-index: 2;
+      @media($mobile) {
+        padding-top: $building-unit-x3;
+      }
     }
 
     &-ball {
       position: absolute;
       bottom: 0;
       right: 0;
+
+      @media($mobile) {
+        max-width: 70%;
+      }
     }
 
     &-one2 {
       margin-bottom: 120px;
+      @media($mobile) {
+        max-width: 50px;
+        margin-bottom: 20px;
+      }
     }
 
     &-rights {
       margin-top: auto;
       padding-bottom: $building-unit-x4;
+      @media($mobile) {
+        padding-bottom: $building-unit-x2;
+      }
     }
 
     &-links {
