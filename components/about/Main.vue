@@ -201,7 +201,7 @@
       flex: 1;
       margin: 0 $building-unit-x2;
       @media($mobile) {
-        margin: $building-unit 0;
+        margin: 0;
       }
 
     }
