@@ -23,6 +23,10 @@ body {
   @media($mobile) {
     font-size: 14px;
   }
+
+  &.is-light {
+    font-weight: $font-light;
+  }
 }
 
 h1,

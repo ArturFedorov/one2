@@ -1,10 +1,12 @@
 <template>
   <div class="container header">
     <div class="header-section">
-      <img
-        class="header-logo"
-        src="~/assets/base-icons/logo.svg"
-        alt="logo">
+      <nuxt-link to="/">
+        <img
+          class="header-logo"
+          src="~/assets/base-icons/logo.svg"
+          alt="logo">
+      </nuxt-link>
     </div>
     <div class="header-section right">
       <nav class="header-navigation">
