@@ -42,3 +42,12 @@
     transform: translateX(0);
   }
 }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}

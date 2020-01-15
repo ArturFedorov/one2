@@ -27,6 +27,14 @@ body {
   &.is-light {
     font-weight: $font-light;
   }
+
+  &.is-medium {
+    font-weight: $font-medium;
+  }
+
+  &.is-bold {
+    font-weight: $font-bold;
+  }
 }
 
 h1,

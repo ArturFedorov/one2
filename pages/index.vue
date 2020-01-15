@@ -10,9 +10,11 @@
            New type of online services where artists can get professional support
            in recording & distribution, promoting music, get funding for projects
          </p>
-         <a class="button-o2 home-button">
+         <nuxt-link
+           to="/form"
+           class="button-o2 home-button">
            join one second
-         </a>
+         </nuxt-link>
        </div>
        <div class="home-section right">
          <img
