@@ -2,7 +2,9 @@
   <div class="artists">
     <div>
       <div>
-        <img src="~/assets/images/nine.png" alt="nine" />
+        <img
+          class="artists-bg"
+          src="~/assets/images/nine.png" alt="nine" />
       </div>
       <div class="artists-header">
         <h1 class="h1 h1-white with-shadow is-uppercase">
@@ -56,6 +58,10 @@
 
   .artists {
     position: relative;
+
+    &-bg {
+      width: 100%;
+    }
     &-header {
       position: absolute;
       line-height: $line-height;

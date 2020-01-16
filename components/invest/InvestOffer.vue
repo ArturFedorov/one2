@@ -48,6 +48,7 @@
       position: relative;
       z-index: -1;
       margin-top: -230px;
+      width: 100%;
       @media($mobile) {
         margin-top: -100px;
       }

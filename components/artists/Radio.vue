@@ -71,6 +71,7 @@
 
     &-image {
       position: relative;
+      width: 100%;
     }
 
     &-circles {

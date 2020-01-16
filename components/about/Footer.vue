@@ -23,6 +23,7 @@
   .footer {
     background: url('../../assets/images/about/bg_footer.jpg') no-repeat 50% 0;
     height: 800px;
+    background-size: cover;
 
     @media($mobile) {
       height: 400px;

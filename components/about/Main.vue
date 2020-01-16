@@ -116,7 +116,7 @@
 
   .about{
     background: url('../../assets/images/about/bg.png') no-repeat;
-    background-size: auto;
+    background-size: cover;
 
     &-content {
       display: flex;

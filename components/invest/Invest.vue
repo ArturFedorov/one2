@@ -42,6 +42,10 @@
       }
     }
 
+    &-image {
+      width: 100%;
+    }
+
     &-text {
       font-size: 48px;
       font-weight: $font-medium;

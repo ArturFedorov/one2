@@ -92,6 +92,7 @@
 
   .form {
     position: relative;
+    padding-top: $building-unit-x7;
     &-bg {
       position: absolute;
       max-width: $image-width-desktop;
@@ -113,7 +114,6 @@
     }
 
     &-content {
-      margin-top: $building-unit-x7;
       margin-bottom: $building-unit-x10*3;
       animation: slideUp 1s ease-in-out, opacity 1.5s ease-in-out;
     }
