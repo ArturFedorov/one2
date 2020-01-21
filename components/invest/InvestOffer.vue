@@ -1,36 +1,41 @@
 <template>
-    <div class="invest-offer">
-      <div
-        id="invest-offer"
-        class="invest-offer-content"
-        v-vpshow>
-        <div class="container">
-          <h2
-            id="text"
-            class="h2 is-white with-shadow invest-offer-header"
-            v-vpshow>
-            OUR GOAL IS TO CREATE CYBERSPACE FOR MUSIC
-            COMMUNITY SO EVERYONE CAN SHARE THEIR
-            TALENT AND BOOST UP MUSIC CAREER
-          </h2>
-          <img
-            class="invest-offer-logo"
-            src="~/assets/base-icons/logo.svg"
-            alt="logo">
-        </div>
+  <div class="invest-offer">
+    <div
+      id="invest-offer"
+      v-vpshow
+      class="invest-offer-content"
+    >
+      <div class="container">
+        <h2
+          id="text"
+          v-vpshow
+          class="h2 is-white with-shadow invest-offer-header"
+        >
+          OUR GOAL IS TO CREATE CYBERSPACE FOR MUSIC
+          COMMUNITY SO EVERYONE CAN SHARE THEIR
+          TALENT AND BOOST UP MUSIC CAREER
+        </h2>
         <img
-          id="invest-image"
-          class="invest-offer-circles"
-          src="~/assets/icons/red-circles.svg"
-          alt="circles"
-          v-vpshow>
+          class="invest-offer-logo"
+          src="~/assets/base-icons/logo.svg"
+          alt="logo"
+        >
       </div>
       <img
-        class="invest-offer-bg"
-        src="~/assets/images/bg_invest.png"
-        alt="invest"
-        v-vpshow>
+        id="invest-image"
+        v-vpshow
+        class="invest-offer-circles"
+        src="~/assets/icons/red-circles.svg"
+        alt="circles"
+      >
     </div>
+    <img
+      v-vpshow
+      class="invest-offer-bg"
+      src="~/assets/images/bg_invest.png"
+      alt="invest"
+    >
+  </div>
 </template>
 <script lang="ts">
   import Vue from 'vue';

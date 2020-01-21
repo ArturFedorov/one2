@@ -1,38 +1,40 @@
 <template>
- <div class="main">
-   <div class="container">
-     <div class="home">
-       <div class="home-section left">
-         <h2 class="h2 with-shadow">
-           ONE SECOND
-         </h2>
-         <p class="text home-text">
-           New type of online services where artists can get professional support
-           in recording & distribution, promoting music, get funding for projects
-         </p>
-         <nuxt-link
-           to="/form"
-           class="button-o2 home-button">
-           join one second
-         </nuxt-link>
-       </div>
-       <div class="home-section right">
-         <img
-           class="home-image"
-           src="~/assets/images/girl2.png"
-           alt="girl" />
-       </div>
-     </div>
-     <Microphones class="home-mics"/>
-     <Database class="home-database" />
-   </div>
-   <div>
-     <Mobile class="home-mobile" />
-     <Promo class="home-promo" />
-     <Artists class="home-artists"/>
-     <Footer class="home-footer"/>
-   </div>
- </div>
+  <div class="main">
+    <div class="container">
+      <div class="home">
+        <div class="home-section left">
+          <h2 class="h2 with-shadow">
+            ONE SECOND
+          </h2>
+          <p class="text home-text">
+            New type of online services where artists can get professional support
+            in recording & distribution, promoting music, get funding for projects
+          </p>
+          <nuxt-link
+            to="/form"
+            class="button-o2 home-button"
+          >
+            join one second
+          </nuxt-link>
+        </div>
+        <div class="home-section right">
+          <img
+            class="home-image"
+            src="~/assets/images/girl2.png"
+            alt="girl"
+          >
+        </div>
+      </div>
+      <Microphones class="home-mics" />
+      <Database class="home-database" />
+    </div>
+    <div>
+      <Mobile class="home-mobile" />
+      <Promo class="home-promo" />
+      <Artists class="home-artists" />
+      <Footer class="home-footer" />
+    </div>
+  </div>
 </template>
 
 <script lang="ts">

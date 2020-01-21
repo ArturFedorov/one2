@@ -4,7 +4,8 @@
     <img
       class="footer-image"
       src="~/assets/icons/triangle-circle.svg"
-      alt="image">
+      alt="image"
+    >
   </div>
 </template>
 

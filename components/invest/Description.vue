@@ -2,23 +2,27 @@
   <div class="description">
     <DescriptionStep
       class="description-section"
-      :text="sectionOne"/>
+      :text="sectionOne"
+    />
     <DescriptionStep
       class="description-section"
-      :imageUrl="imageTwoUrl"
-      :isReversed="true"
-      :text="sectionTwo"/>
+      :image-url="imageTwoUrl"
+      :is-reversed="true"
+      :text="sectionTwo"
+    />
     <DescriptionStep
       class="description-section"
-      :imageUrl="imageThreeUrl"
-      :isNarrowText="true"
-      :text="sectionThree"/>
+      :image-url="imageThreeUrl"
+      :is-narrow-text="true"
+      :text="sectionThree"
+    />
     <DescriptionStep
       class="description-section"
-      :imageUrl="imageFourUrl"
-      :isReversed="true"
-      :isNarrowText="true"
-      :text="sectionFour"/>
+      :image-url="imageFourUrl"
+      :is-reversed="true"
+      :is-narrow-text="true"
+      :text="sectionFour"
+    />
   </div>
 </template>
 <script lang="ts">
@@ -38,7 +42,7 @@
         sectionThree: 'Our team makes promo and helps with management',
         imageFourUrl: require('~/assets/images/invest/pick.png'),
         sectionFour: 'Buy our tokens and invest in music business'
-      }
+      };
     }
   });
 </script>

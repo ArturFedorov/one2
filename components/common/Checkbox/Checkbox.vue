@@ -2,17 +2,20 @@
   <label
     class="checkbox"
     :class="{'is-disabled': disabled}"
-    @click="toggleCheck">
+    @click="toggleCheck"
+  >
     <input
       :name="name"
       :checked="checked"
       :disabled="disabled"
       type="checkbox"
-      @click.stop.prevent>
+      @click.stop.prevent
+    >
     <span
       class="checkbox-icon"
-      :class="{'is-checked': checkedValue}"/>
-    <span class="checkbox-label"><slot/></span>
+      :class="{'is-checked': checkedValue}"
+    />
+    <span class="checkbox-label"><slot /></span>
   </label>
 </template>
 
@@ -20,9 +23,18 @@
   import Vue from 'vue';
   export default Vue.extend({
     props: {
-      name: String,
-      checked: Boolean,
-      disabled: Boolean
+      name: {
+        type: String,
+        required: false
+      },
+      checked: {
+        type: Boolean,
+        default: false
+      },
+      disabled: {
+        type: Boolean,
+        default: false
+      }
     },
     computed: {
       checkedValue (): boolean {

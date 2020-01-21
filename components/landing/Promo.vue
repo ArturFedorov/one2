@@ -2,8 +2,9 @@
   <div class="container promo">
     <h2
       id="text"
+      v-vpshow
       class="h2 with-shadow promo-header"
-      v-vpshow>
+    >
       WITH
       <span class="h2-reversed">ONE SECOND</span>
       ARTISTS GET
@@ -11,27 +12,33 @@
     <div class="promo-content">
       <div
         id="image"
+        v-vpshow
         class="promo-content-section"
-        v-vpshow>
+      >
         <img
           class="promo-image"
-          src="~/assets/images/plate.png"/>
+          src="~/assets/images/plate.png"
+        >
       </div>
       <div
         id="image1"
+        v-vpshow
         class="promo-content-section"
-        v-vpshow>
+      >
         <img
           class="promo-image"
-          src="~/assets/images/promo.png"/>
+          src="~/assets/images/promo.png"
+        >
       </div>
       <div
         id="image2"
+        v-vpshow
         class="promo-content-section"
-        v-vpshow>
+      >
         <img
           class="promo-image"
-          src="~/assets/images/merch.png"/>
+          src="~/assets/images/merch.png"
+        >
       </div>
     </div>
   </div>

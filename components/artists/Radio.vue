@@ -2,7 +2,8 @@
   <div class="radio">
     <img
       class="radio-image"
-      src="~/assets/images/radio.jpg"/>
+      src="~/assets/images/radio.jpg"
+    >
     <div class="radio-content">
       <div class="container">
         <h1 class="h1 h1-white with-shadow is-uppercase radio-header">
@@ -18,11 +19,13 @@
           <div
             v-for="item in items"
             :key="item"
-            class="list-o2-item radio-list-item">
+            class="list-o2-item radio-list-item"
+          >
             <img
               class="list-o2-image"
               src="~/assets/icons/disc.svg"
-              alt="disc" />
+              alt="disc"
+            >
             <p class="text">
               {{ item }}
             </p>
@@ -34,7 +37,8 @@
             <img
               class="radio-button-image"
               src="~/assets/icons/circles.svg"
-              alt="circles">
+              alt="circles"
+            >
           </div>
         </div>
       </div>
@@ -42,7 +46,8 @@
     <img
       class="radio-circles"
       src="~/assets/icons/circles-grey.svg"
-      alt="circles">
+      alt="circles"
+    >
   </div>
 </template>
 

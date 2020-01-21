@@ -9,5 +9,25 @@
     border: 1px solid $gray;
     padding: $building-unit $building-unit-x2;
     width: 100%;
+
+    &.invalid {
+      color: $red;
+      border-color: $red;
+    }
+  }
+
+  &-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: $building-unit-x3;
+  }
+
+  &.with-image {
+    position: relative;
+
+    .input-o2-box {
+      padding-right: $building-unit-x7;
+    }
   }
 }

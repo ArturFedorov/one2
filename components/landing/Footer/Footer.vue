@@ -2,11 +2,13 @@
   <div class="footer">
     <FooterContent />
     <div
-      class="footer-bg">
+      class="footer-bg"
+    >
       <img
         class="footer-ball"
         src="~/assets/images/red-ball-half.png"
-        alt="stripes">
+        alt="stripes"
+      >
     </div>
   </div>
 </template>

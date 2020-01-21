@@ -1,6 +1,7 @@
 <template>
   <div
-    class="database">
+    class="database"
+  >
     <div class="database-section left">
       <h2 class="h2 with-shadow database-header">
         CONNECT TO OUR DATABASE
@@ -27,7 +28,8 @@
       <img
         class="database-image"
         src="~/assets/images/database.png"
-        alt="database" />
+        alt="database"
+      >
     </div>
   </div>
 </template>

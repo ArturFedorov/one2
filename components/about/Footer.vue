@@ -1,9 +1,10 @@
 <template>
   <div
     id="footer"
+    v-vpshow
     class="footer"
-    v-vpshow>
-    <FooterContent/>
+  >
+    <FooterContent />
   </div>
 </template>
 

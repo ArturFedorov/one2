@@ -2,13 +2,15 @@
   <div class="footer-o2">
     <div
       id="content"
+      v-vpshow
       class="footer-o2-content"
-      v-vpshow>
+    >
       <div>
         <img
           class="footer-o2-one2"
           src="~/assets/images/one2.png"
-          alt="one2" />
+          alt="one2"
+        >
       </div>
       <div class="footer-o2-links">
         <a class="text is-white is-uppercase">About us</a>
@@ -16,17 +18,21 @@
         <a class="text is-white is-uppercase">Invest</a>
       </div>
       <div class="footer-o2-rights">
-        <p class="text is-white">All rights reserved</p>
+        <p class="text is-white">
+          All rights reserved
+        </p>
       </div>
     </div>
     <img
       class="footer-o2-car"
       src="~/assets/images/car_logo.png"
-      alt="footer"/>
+      alt="footer"
+    >
     <img
       class="footer-o2-ball"
       src="~/assets/images/artists_elipse.png"
-      alt="elipse">
+      alt="elipse"
+    >
   </div>
 </template>
 

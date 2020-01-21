@@ -1,24 +1,29 @@
 <template>
   <div
-    class="microphone">
+    class="microphone"
+  >
     <img
       class="microphone-bg"
       src="~/assets/images/stripes.png"
-      alt="stripes">
+      alt="stripes"
+    >
     <div
       id="microphones"
+      v-vpshow
       class="microphone-container"
-      v-vpshow>
+    >
       <div class="microphone-image">
         <img
           class="microphone-mics"
           src="~/assets/images/mics.png"
-          alt="mics">
+          alt="mics"
+        >
       </div>
       <div
         id="container"
+        v-vpshow
         class="microphone-list-container"
-        v-vpshow>
+      >
         <h2 class="h2 microphone-header">
           EVERYONES WHO NEEDS TO
           BOOST UP A MUSIC CAREER
@@ -27,11 +32,13 @@
           <div
             v-for="item in items"
             :key="item"
-            class="list-o2-item microphone-list-item">
+            class="list-o2-item microphone-list-item"
+          >
             <img
               class="list-o2-image"
               src="~/assets/icons/disc.svg"
-              alt="disc" />
+              alt="disc"
+            >
             <p class="text">
               {{ item }}
             </p>

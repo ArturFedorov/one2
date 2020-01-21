@@ -3,24 +3,28 @@
     <img
       class="mobile-bg"
       src="~/assets/images/mobileBg.png"
-      alt="mobile">
+      alt="mobile"
+    >
     <div class="container mobile-content">
       <div class="mobile-content-section">
         <img
           class="mobile-bg-small"
           src="~/assets/images/mobileBg-small.png"
-          alt="mobile">
+          alt="mobile"
+        >
         <img
           id="image"
+          v-vpshow
           class="mobile-image"
           src="~/assets/images/mobile.png"
           alt="mobile"
-          v-vpshow>
+        >
       </div>
       <div
         id="mobile"
+        v-vpshow
         class="mobile-content-section is-right"
-        v-vpshow>
+      >
         <h2 class="h2 with-shadow mobile-header">
           WATCH YOUR NUMBERS
         </h2>

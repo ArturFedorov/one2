@@ -1,4 +1,4 @@
-let development = process.env.NODE_ENV !== 'production'
+const development = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   mode: 'universal',
@@ -10,7 +10,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { 'http-equiv': 'ScreenOrientation', content: 'autoRotate:disabled'},
+      { 'http-equiv': 'ScreenOrientation', content: 'autoRotate:disabled' },
       {
         hid: 'description',
         name: 'description',
@@ -34,12 +34,13 @@ module.exports = {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    '~/shared/directives/scroll.directive.ts'
+    '~/shared/directives/scroll.directive.ts',
+    { src: '~/plugins/Vuelidate' }
   ],
   router: {
-    //base:  development ? '/' : '/onesecond.cc/',
+    // base:  development ? '/' : '/onesecond.cc/',
     linkActiveClass: 'header-navigation-link-active',
-    linkExactActiveClass: 'header-navigation-link-active-exact',
+    linkExactActiveClass: 'header-navigation-link-active-exact'
   },
   /*
    ** Nuxt.js dev-modules
@@ -49,8 +50,8 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    '@nuxtjs/bulma'
+    '@nuxtjs/bulma',
+    '@nuxtjs/axios'
   ],
   /*
    ** Build configuration

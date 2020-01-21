@@ -1,7 +1,7 @@
 <template>
   <div class="artists">
     <Radio />
-    <Offer class="artists-offer"/>
+    <Offer class="artists-offer" />
     <Footer />
   </div>
 </template>

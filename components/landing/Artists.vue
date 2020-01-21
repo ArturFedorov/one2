@@ -4,7 +4,8 @@
       <div>
         <img
           class="artists-bg"
-          src="~/assets/images/nine.png" alt="nine" />
+          src="~/assets/images/nine.png" alt="nine"
+        >
       </div>
       <div class="artists-header">
         <h1 class="h1 h1-white with-shadow is-uppercase">
@@ -16,8 +17,8 @@
     </div>
     <div class="investors-header">
       <h1 class="h1 with-shadow is-uppercase">
-        Become an <br />
-        <span class="h1-reversed">investor</span> for young <br/>
+        Become an <br>
+        <span class="h1-reversed">investor</span> for young <br>
         or experienced artists
       </h1>
     </div>

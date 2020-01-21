@@ -1,23 +1,26 @@
 <template>
   <div class="description">
-    <div class="description-devider"></div>
+    <div class="description-devider" />
     <div
       class="container description-content"
-      :class="{'is-reversed': isReversed}">
+      :class="{'is-reversed': isReversed}"
+    >
       <div class="description-content-section is-right">
         <img
           id="image"
-          class="description-image"
-          :src="imageUrl" alt="how"
-          v-vpshow/>
+          v-vpshow
+          class="description-image" :src="imageUrl"
+          alt="how"
+        >
       </div>
       <div class="description-content-section">
         <h2
           id="text"
+          v-vpshow
           class="h2 is-medium description-header"
           :class="{'is-narrow': isNarrowText}"
-          v-vpshow>
-          {{text}}
+        >
+          {{ text }}
         </h2>
         <a class="button-o2 is-black invest-button">
           join one second
@@ -37,6 +40,7 @@
       },
       text: {
         type: String,
+        default: '',
         required: false
       },
       isReversed: {

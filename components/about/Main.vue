@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div class="container about-content">
-      <div class="about-section"></div>
+      <div class="about-section" />
       <div class="about-section with-border">
         <div class="about-section-header">
           <h1 class="h1 is-uppercase h1-white about-header">
@@ -9,7 +9,8 @@
           </h1>
           <img
             class="about-section-icon"
-            src="~/assets/icons/one-red.svg"/>
+            src="~/assets/icons/one-red.svg"
+          >
         </div>
         <h2 class="h2 is-uppercase about-subheader">
           It is our vision
@@ -21,14 +22,17 @@
     <div class="container about-cards">
       <img
         class="about-cards-bg"
-        src="~/assets/icons/red-circle.svg"/>
+        src="~/assets/icons/red-circle.svg"
+      >
       <div
         id="about"
+        v-vpshow
         class="card about-card"
-        v-vpshow>
+      >
         <img
           class="card-bg"
-          src="~/assets/icons/triangle-half.svg"/>
+          src="~/assets/icons/triangle-half.svg"
+        >
         <div class="card-content">
           <h2 class="h2 is-white is-uppercase card-header with-margin">
             We unite creativity finance and management
@@ -41,17 +45,20 @@
             </p>
             <img
               class="card-icon"
-              src="~/assets/icons/one-red.svg"/>
+              src="~/assets/icons/one-red.svg"
+            >
           </div>
         </div>
       </div>
       <div
         id="form"
+        v-vpshow
         class="card about-card"
-        v-vpshow>
+      >
         <img
           class="card-bg-2"
-          src="~/assets/icons/form-bg.svg"/>
+          src="~/assets/icons/form-bg.svg"
+        >
         <div class="card-content">
           <h2 class="h2 is-white is-uppercase card-header">
             Join us
@@ -67,18 +74,21 @@
               <input
                 type="text"
                 placeholder="Your name"
-                class="input-o2-box"/>
+                class="input-o2-box"
+              >
             </div>
             <div class="input-o2">
               <input
                 placeholder="Your email"
                 type="text"
-                class="input-o2-box"/>
+                class="input-o2-box"
+              >
             </div>
             <div class="card-form-checkbox">
               <Checkbox
                 :checked="checked"
-                @checked="checked=!checked"/>
+                @checked="checked=!checked"
+              />
               <span class="text is-white is-light card-form-checkbox-label">
                 I agree to share personal information
               </span>
@@ -106,7 +116,7 @@
     data () {
       return {
         checked: false
-      }
+      };
     }
   });
 </script>

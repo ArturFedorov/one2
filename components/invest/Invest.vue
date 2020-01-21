@@ -3,11 +3,13 @@
     <img
       class="invest-image"
       src="~/assets/images/invest.png"
-      alt="invest">
+      alt="invest"
+    >
     <div
       id="offer"
+      v-vpshow
       class="invest-capture"
-      v-vpshow>
+    >
       <h1 class="h1 h1-white with-shadow is-uppercase invest-header">
         One second
       </h1>

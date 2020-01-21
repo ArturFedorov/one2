@@ -1,12 +1,14 @@
 <template>
   <div
     id="content"
+    v-vpshow
     class="container footer-content"
-    v-vpshow>
+  >
     <div class="footer-image">
       <img
         src="~/assets/images/one2.png"
-        alt="one">
+        alt="one"
+      >
     </div>
     <div class="footer-content-links">
       <a class="text is-white is-uppercase">About us</a>
@@ -14,7 +16,9 @@
       <a class="text is-white is-uppercase">Invest</a>
     </div>
     <div class="footer-content-rights">
-      <p class="text is-red">All rights reserved</p>
+      <p class="text is-red">
+        All rights reserved
+      </p>
     </div>
   </div>
 </template>

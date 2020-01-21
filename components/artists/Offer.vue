@@ -3,15 +3,17 @@
     <img
       class="offer-bg"
       src="~/assets/icons/triangles.svg"
-      alt="triangles">
+      alt="triangles"
+    >
     <div
-      class="container"
       id="offer"
-      v-vpshow>
+      v-vpshow
+      class="container"
+    >
       <h1 class="h1 with-shadow is-uppercase offer-header">
         We provide you with
       </h1>
-      <img src="~/assets/images/offer.png" alt="offer" />
+      <img src="~/assets/images/offer.png" alt="offer">
     </div>
     <div class="container offer-text">
       <div class="offer-text-section with-border">

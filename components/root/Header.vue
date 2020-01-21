@@ -5,24 +5,28 @@
         <img
           class="header-logo"
           src="~/assets/base-icons/logo.svg"
-          alt="logo">
+          alt="logo"
+        >
       </nuxt-link>
     </div>
     <div class="header-section right">
       <nav class="header-navigation">
         <nuxt-link
           class="header-navigation-link is-uppercase"
-          to="/artists">
+          to="/artists"
+        >
           Artists
         </nuxt-link>
         <nuxt-link
           class="header-navigation-link is-uppercase"
-          to="/invest">
+          to="/invest"
+        >
           Invest
         </nuxt-link>
         <nuxt-link
           class="header-navigation-link is-uppercase"
-          to="/about">
+          to="/about"
+        >
           About Us
         </nuxt-link>
       </nav>
@@ -31,9 +35,9 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+  import Vue from 'vue';
 
-export default Vue.extend({});
+  export default Vue.extend({});
 </script>
 
 <style scoped lang="scss">

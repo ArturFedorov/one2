@@ -1,9 +1,9 @@
 <template>
   <div class="invest">
     <Invest />
-    <InvestOffer class="infest-offer"/>
+    <InvestOffer class="infest-offer" />
     <Description />
-    <Footer class="invest-footer"/>
+    <Footer class="invest-footer" />
   </div>
 </template>
 

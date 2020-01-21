@@ -3,7 +3,8 @@
     <img
       class="form-bg"
       src="~/assets/images/form/plate.png"
-      alt="plate">
+      alt="plate"
+    >
     <div class="container form-content">
       <h1 class="h1 is-uppercase with-shadow form-header">
         join one second
@@ -21,66 +22,107 @@
             <input
               placeholder="Your name"
               type="text"
-              class="input-o2-box"/>
+              class="input-o2-box"
+              v-model="name"
+              :class="{'invalid': $v.name.$dirty && !$v.name.required}"
+            >
           </div>
           <div class="input-o2">
             <input
               placeholder="Date of birth"
               type="text"
-              class="input-o2-box"/>
+              class="input-o2-box"
+            >
           </div>
           <div class="input-o2">
-            <input
+            <select
               placeholder="Select country"
               type="text"
-              class="input-o2-box"/>
+              class="input-o2-box"
+              v-model="selectedCountry"
+            >
+              <option
+                v-for="country in countries"
+                :key="country.code"
+                :value="country.name">
+                {{country.name}}
+              </option>
+            </select>
           </div>
           <div class="input-o2">
             <input
               placeholder="Your city"
               type="text"
-              class="input-o2-box"/>
+              class="input-o2-box"
+            >
           </div>
         </div>
         <div class="form-section">
           <p class="text is-bold form-section-header">
             Social networks
           </p>
-          <div class="input-o2">
+          <div class="input-o2 with-image">
             <input
               placeholder="Facebook link"
               type="text"
-              class="input-o2-box"/>
+              class="input-o2-box"
+            >
+            <img
+              class="input-o2-image"
+              src="~/assets/icons/facebook.svg"
+            >
           </div>
-          <div class="input-o2">
+          <div class="input-o2 with-image">
             <input
               placeholder="Youtube link"
               type="text"
-              class="input-o2-box"/>
+              class="input-o2-box"
+            >
+            <img
+              class="input-o2-image"
+              src="~/assets/icons/youtube.svg"
+            >
           </div>
         </div>
       </div>
     </div>
     <div class="form-footer">
-     <div class="container">
-       <a
-         class="button-o2 with-border form-button">
-         Save
-       </a>
-       <a
-         class="button-o2 is-white with-border form-button">
-         Cancel
-       </a>
-     </div>
+      <div class="container">
+        <a
+          class="button-o2 with-border form-button"
+          :class="{'disabled': $v.$invalid}">
+          Send
+        </a>
+        <a
+          class="button-o2 is-white with-border form-button"
+        >
+          Cancel
+        </a>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
   import Vue from 'vue';
+  import { required } from 'vuelidate/lib/validators';
+  import countries from '../shared/constants/Countries';
 
   export default Vue.extend({
-    components: {
+    data () {
+      return {
+        name: '',
+        selectedCountry: 'Russian Federation',
+        countries
+      };
+    },
+    validations: {
+      name: {
+        required
+      }
+    },
+    created () {
+      console.log(this.$v);
     }
   });
 </script>
