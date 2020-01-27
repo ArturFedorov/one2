@@ -108,7 +108,8 @@
       <div class="container">
         <a
           class="button-o2 with-border form-button"
-          :class="{'disabled': $v.$invalid}">
+          :class="{'disabled': $v.$invalid}"
+          @click="submitForm">
           Send
         </a>
         <a
@@ -124,6 +125,7 @@
 
 <script lang="ts">
   import Vue from 'vue';
+  // import axios from 'axios'
   import { required, url } from 'vuelidate/lib/validators';
   import countries from '../shared/constants/Countries';
 
@@ -134,7 +136,8 @@
         selectedCountry: 'Russian Federation',
         countries,
         facebook: '',
-        youtube: ''
+        youtube: '',
+        data: {}
       };
     },
     // @ts-ignore
@@ -153,7 +156,25 @@
       cancel () {
         // @ts-ignore
         this.$router.back()
+      },
+      async submitForm () {
+        // @ts-ignore
+        await this.$axios.$post('/api/submit', {
+          // @ts-ignore
+          name: this.name,
+          // @ts-ignore
+          country: this.selectedCountry,
+          // @ts-ignore
+          facebook: this.facebook,
+          // @ts-ignore
+          youtube: this.youtube
+        });
       }
+    },
+    async created () {
+      const data = await this.$axios.$get('/api/users');
+      console.log(data);
+      this.data = data;
     }
   });
 </script>
