@@ -22,23 +22,27 @@
             <input
               placeholder="Your name"
               type="text"
-              class="input-o2-box"
+              class="input-o2-box wider"
               v-model="name"
-              :class="{'invalid': $v.name.$dirty && !$v.name.required}"
-            >
+              :class="{'invalid': !$v.name.required}">
+            <p
+              class="input-o2-error"
+              v-if="!$v.name.required">
+              Name is required
+            </p>
           </div>
           <div class="input-o2">
             <input
               placeholder="Date of birth"
               type="text"
-              class="input-o2-box"
+              class="input-o2-box wider"
             >
           </div>
-          <div class="input-o2">
+          <div class="select-o2">
             <select
               placeholder="Select country"
               type="text"
-              class="input-o2-box"
+              class="select-o2-box wider"
               v-model="selectedCountry"
             >
               <option
@@ -53,7 +57,7 @@
             <input
               placeholder="Your city"
               type="text"
-              class="input-o2-box"
+              class="input-o2-box wider"
             >
           </div>
         </div>
@@ -63,25 +67,39 @@
           </p>
           <div class="input-o2 with-image">
             <input
-              placeholder="Facebook link"
+              placeholder="Facebook link (starts with http:)"
               type="text"
-              class="input-o2-box"
+              class="input-o2-box wider"
+              :class="{'invalid': !$v.facebook.url}"
+              v-model="facebook"
             >
             <img
               class="input-o2-image"
               src="~/assets/icons/facebook.svg"
             >
+            <p
+              class="input-o2-error"
+              v-if="!$v.facebook.url">
+              Supposed to be url starts with https
+            </p>
           </div>
           <div class="input-o2 with-image">
             <input
-              placeholder="Youtube link"
+              placeholder="Youtube link (starts with http:)"
               type="text"
-              class="input-o2-box"
+              class="input-o2-box wider"
+              :class="{'invalid': !$v.youtube.url}"
+              v-model="youtube"
             >
             <img
               class="input-o2-image"
               src="~/assets/icons/youtube.svg"
             >
+            <p
+              class="input-o2-error"
+              v-if="!$v.youtube.url">
+              Supposed to be url starts with https
+            </p>
           </div>
         </div>
       </div>
@@ -95,6 +113,7 @@
         </a>
         <a
           class="button-o2 is-white with-border form-button"
+          @click="cancel"
         >
           Cancel
         </a>
@@ -105,7 +124,7 @@
 
 <script lang="ts">
   import Vue from 'vue';
-  import { required } from 'vuelidate/lib/validators';
+  import { required, url } from 'vuelidate/lib/validators';
   import countries from '../shared/constants/Countries';
 
   export default Vue.extend({
@@ -113,16 +132,28 @@
       return {
         name: '',
         selectedCountry: 'Russian Federation',
-        countries
+        countries,
+        facebook: '',
+        youtube: ''
       };
     },
+    // @ts-ignore
     validations: {
       name: {
         required
+      },
+      facebook: {
+        url
+      },
+      youtube: {
+        url
       }
     },
-    created () {
-      console.log(this.$v);
+    methods: {
+      cancel () {
+        // @ts-ignore
+        this.$router.back()
+      }
     }
   });
 </script>
@@ -194,11 +225,10 @@
     }
   }
 
-  .input-o2 {
+  .input-o2, .select-o2 {
     max-width: 750px;
   }
-
-  .input-o2:not(:last-child) {
-    margin-bottom: $building-unit-x2;
+  .input-o2:not(:last-child), .select-o2:not(:last-child) {
+    margin-bottom: $building-unit-x4;
   }
 </style>

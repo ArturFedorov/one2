@@ -1,5 +1,4 @@
-.input-o2 {
-  position: relative;
+.select-o2 {
   &-box {
     -webkit-appearance: none;
     font-size: 18px;
@@ -11,16 +10,20 @@
     border: 1px solid $gray;
     padding: $building-unit $building-unit-x2;
     width: 100%;
+    background-color: $white;
     border-radius: 0;
     transition: all .4s;
 
-    &.invalid {
-      color: $red;
-      border-color: $red;
-    }
+    // arrow
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
 
     &.wider {
       padding: $building-unit-x2;
+      background-position-y: 15px;
     }
   }
 
@@ -32,19 +35,6 @@
     color: $red;
     font-weight: $font-medium;
   }
-
-  &-image {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: $building-unit-x3;
-  }
-
-  &.with-image {
-    position: relative;
-
-    .input-o2-box {
-      padding-right: $building-unit-x7;
-    }
-  }
 }
+
+
