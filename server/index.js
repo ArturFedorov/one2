@@ -1,7 +1,9 @@
+const emailConfig = require('../api/services/emailService');
 const express = require('express');
 const consola = require('consola');
 const { Nuxt, Builder } = require('nuxt');
 const app = express();
+
 
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js');
@@ -21,6 +23,7 @@ async function start () {
     await nuxt.ready();
   }
 
+  emailConfig.create();
   // Give nuxt middleware to express
   app.use(nuxt.render);
 

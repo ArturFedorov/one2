@@ -24,18 +24,32 @@
               type="text"
               class="input-o2-box wider"
               v-model="name"
-              :class="{'invalid': !$v.name.required}">
+              :class="{'invalid': nameTouched && !$v.name.required}">
             <p
               class="input-o2-error"
-              v-if="!$v.name.required">
+              v-if="nameTouched && !$v.name.required">
               Name is required
             </p>
           </div>
           <div class="input-o2">
             <input
-              placeholder="Date of birth"
+              placeholder="Your email"
               type="text"
               class="input-o2-box wider"
+              v-model="email"
+              :class="{'invalid': (emailTouched && !$v.email.required) || (!emailTouched && !$v.email.email)}">
+            <p
+              class="input-o2-error">
+              <span v-if="emailTouched && !$v.email.required">Email is required</span>
+              <span v-if="!emailTouched && !$v.email.email">Email should be in correct format</span>
+            </p>
+          </div>
+          <div class="input-o2">
+            <input
+              placeholder="Your age"
+              type="text"
+              class="input-o2-box wider"
+              v-model="birth"
             >
           </div>
           <div class="select-o2">
@@ -58,6 +72,7 @@
               placeholder="Your city"
               type="text"
               class="input-o2-box wider"
+              v-model="city"
             >
           </div>
         </div>
@@ -125,19 +140,24 @@
 
 <script lang="ts">
   import Vue from 'vue';
-  // import axios from 'axios'
-  import { required, url } from 'vuelidate/lib/validators';
+  import { required, url, email } from 'vuelidate/lib/validators';
   import countries from '../shared/constants/Countries';
+  import { FormService } from '../api/services/FormService';
 
   export default Vue.extend({
     data () {
       return {
         name: '',
+        email: '',
         selectedCountry: 'Russian Federation',
         countries,
         facebook: '',
         youtube: '',
-        data: {}
+        data: {},
+        birth: '',
+        city: '',
+        nameTouched: false,
+        emailTouched: false
       };
     },
     // @ts-ignore
@@ -150,6 +170,10 @@
       },
       youtube: {
         url
+      },
+      email: {
+        required,
+        email
       }
     },
     methods: {
@@ -159,22 +183,37 @@
       },
       async submitForm () {
         // @ts-ignore
-        await this.$axios.$post('/api/submit', {
-          // @ts-ignore
-          name: this.name,
-          // @ts-ignore
-          country: this.selectedCountry,
-          // @ts-ignore
-          facebook: this.facebook,
-          // @ts-ignore
-          youtube: this.youtube
-        });
+        try {
+          await FormService.submitForm(
+            // @ts-ignore
+            this.name,
+            // @ts-ignore
+            this.email,
+            // @ts-ignore
+            this.birth,
+            // @ts-ignore
+            this.selectedCountry,
+            // @ts-ignore
+            this.city,
+            // @ts-ignore
+            this.facebook,
+            // @ts-ignore
+            this.youtube
+          )
+        } catch {
+          console.log('Error');
+        }
       }
     },
-    async created () {
-      const data = await this.$axios.$get('/api/users');
-      console.log(data);
-      this.data = data;
+    watch: {
+      name (newValue: string) {
+        // @ts-ignore
+        this.nameTouched = newValue === '';
+      },
+      email (newValue: string) {
+        // @ts-ignore
+        this.emailTouched = newValue === '';
+      }
     }
   });
 </script>

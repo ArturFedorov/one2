@@ -1,0 +1,13 @@
+{
+  "email": {
+    "smptConfig":{
+      "service": "gmail",
+      "auth": {
+        "user": "onesecond.connect@gmail.com",
+        "pass": "@one2one2"
+      },
+      "secure": false
+    },
+    "from":"onesecond.connect@gmail.com"
+  }
+}

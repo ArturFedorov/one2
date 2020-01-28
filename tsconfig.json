@@ -27,7 +27,8 @@
       "@types/vuelidate",
       "@nuxt/types",
       "@nuxt/vue-app",
-      "@nuxtjs/axios"
+      "@nuxtjs/axios",
+      "@types/nodemailer"
     ]
   },
   "exclude": [
