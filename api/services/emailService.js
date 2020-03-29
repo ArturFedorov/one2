@@ -18,7 +18,8 @@ let from = '';
 const create = () => {
 
   const mailOption = configs.email.smptConfig;
-  from = configs.email.from;;
+  from = configs.email.from;
+  mailOption.attachments = configs.email.attachments;
   emailConfig = nodemailer.createTransport(mailOption);
 };
 

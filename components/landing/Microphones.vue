@@ -44,9 +44,11 @@
             </p>
           </div>
           <div class="microphone-button">
-            <a class="button-o2 is-white">
+            <nuxt-link
+              to="/form"
+              class="button-o2 is-white">
               join one second
-            </a>
+            </nuxt-link>
           </div>
         </div>
       </div>

@@ -42,9 +42,11 @@
     </div>
     <div class="container offer-button">
       <div class="offer-button-section">
-        <a class="button-o2 is-black">
+        <nuxt-link
+          to="/form"
+          class="button-o2 is-black">
           join one second
-        </a>
+        </nuxt-link>
       </div>
       <div class="offer-button-section">
         <img src="~/assets/icons/one-red.svg" alt="one">
@@ -80,7 +82,7 @@
         justify-content: flex-end;
         padding-top: $building-unit-x8;
 
-        @media($mobile) {
+        @media($tablet) {
           justify-content: center;
           padding-top: $building-unit-x4;
           &:last-child {
@@ -94,8 +96,13 @@
       display: flex;
       margin-top: $building-unit-x12*2;
 
-      @media($mobile) {
+      @media ($tablet) {
         flex-direction: column;
+        border: 3px solid $black;
+        margin: $building-unit-x9 $building-unit-x2 0 $building-unit-x2;
+      }
+
+      @media($mobile) {
         border: 3px solid $black;
         margin: $building-unit-x9 $building-unit-x2 0 $building-unit-x2;
       }
@@ -127,15 +134,14 @@
         &.with-border {
           border: 5px solid $black;
 
-          @media($mobile) {
+          @media ($tablet) {
             border: none;
             border-bottom: 3px solid $black;
           }
-
           .h2 {
             border-bottom: 5px solid $black;
 
-            @media($mobile) {
+            @media($tablet) {
               border: none;
             }
           }

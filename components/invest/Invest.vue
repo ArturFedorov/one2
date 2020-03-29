@@ -16,9 +16,11 @@
       <p class="text is-white invest-text">
         Use our service to invest in music industry.
       </p>
-      <a class="button-o2 invest-button">
+      <nuxt-link
+        to="/form"
+        class="button-o2 invest-button">
         join one second
-      </a>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -36,6 +38,7 @@
   .invest {
     position: relative;
     line-height: 0;
+    z-index: 2;
     &-header {
       margin-bottom: $building-unit;
       line-height: 100%;
@@ -53,6 +56,10 @@
       font-weight: $font-medium;
       line-height: 100%;
       margin-bottom: $building-unit-x10;
+
+      @media($tablet) {
+        margin-bottom: $building-unit-x6;
+      }
 
       @media($mobile) {
         font-size: 18px;

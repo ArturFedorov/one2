@@ -23,11 +23,11 @@
         </p>
       </div>
     </div>
-    <img
-      class="footer-o2-car"
-      src="~/assets/images/car_logo.png"
-      alt="footer"
-    >
+<!--    <img-->
+<!--      class="footer-o2-car"-->
+<!--      src="~/assets/images/car_logo.png"-->
+<!--      alt="footer"-->
+<!--    >-->
     <img
       class="footer-o2-ball"
       src="~/assets/images/artists_elipse.png"
@@ -49,7 +49,12 @@
   .footer-o2 {
     position: relative;
     height: 800px;
-    background-color: $red;
+    background: $red left 100% url('../../assets/images/car_logo.png') no-repeat;
+    background-size: contain;
+
+    @media ($tablet) {
+      height: 480px;
+    }
 
     @media($mobile) {
       height: 249px;
@@ -75,7 +80,7 @@
       bottom: 0;
       right: 0;
 
-      @media($mobile) {
+      @media ($tablet) {
         max-width: 70%;
       }
     }

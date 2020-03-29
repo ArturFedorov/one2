@@ -20,9 +20,11 @@
           Beats
         </p>
       </div>
-      <a class="button-o2 is-black database-button">
+      <nuxt-link
+        to="/form"
+        class="button-o2 is-black database-button">
         join one second
-      </a>
+      </nuxt-link>
     </div>
     <div class="database-section right">
       <img
@@ -51,19 +53,19 @@
 
     @media($tablet) {
       min-width: $database-image-width-tablet;
-    }
-
-    @media($mobile) {
-      margin-top: 400px;
       flex-direction: column-reverse;
+      margin-top: 400px;
     }
-
     &-button {
       align-self: center;
       margin-top: 150px;
 
-      @media($mobile) {
+      @media ($tablet) {
         align-self: flex-start;
+        margin-top: $building-unit-x8;
+      }
+
+      @media($mobile) {
         margin-top: $building-unit-x5;
       }
     }
@@ -79,6 +81,14 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        @media ($desktop) {
+          padding-right: 40px;
+        }
+
+        @media ($tablet) {
+          align-items: flex-start;
+          padding: 0 20px 0 20px;
+        }
 
         @media($mobile) {
           align-items: flex-start;
@@ -94,6 +104,10 @@
     }
 
     &-header {
+      @media ($desktop) {
+        text-align: center;
+      }
+
       @media($mobile) {
         line-height: 100%;
       }
@@ -104,6 +118,10 @@
       width: 100%;
       justify-content: space-between;
       padding: 0 $building-unit-x6 0 $building-unit-x4;
+
+      @media ($tablet) {
+        padding: 0 20px 0 5px;
+      }
 
       @media($mobile) {
         padding: $building-unit_x0_5 0 0 3px;
@@ -116,7 +134,13 @@
       left: 30px;
       min-width: $database-image-width-desktop;
 
+      @media ($desktop) {
+        left: -30px;
+      }
+
       @media($tablet) {
+        position: relative;
+        left: 0;
         min-width: $database-image-width-tablet;
       }
 
@@ -124,7 +148,6 @@
         position: relative;
         min-width: $database-image-width-mobile;
         max-width: 535px;
-        left: 0;
       }
     }
   }

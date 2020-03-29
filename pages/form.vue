@@ -199,9 +199,9 @@
             this.facebook,
             // @ts-ignore
             this.youtube
-          )
-        } catch {
-          console.log('Error');
+          );
+        } catch (e) {
+          console.log('Error', e);
         }
       }
     },
@@ -221,11 +221,22 @@
 <style scoped lang="scss">
   @import "../assets/styles/base/variables";
   $image-width-desktop: 735px;
+  $image-width-tablet: 400px;
   $image-width-mobile: 250px;
 
   .form {
     position: relative;
     padding-top: $building-unit-x7;
+    overflow: hidden;
+
+    @media($tablet) {
+      padding: 3em;
+    }
+
+    @media($mobile) {
+      padding: 2em;
+    }
+
     &-bg {
       position: absolute;
       max-width: $image-width-desktop;
@@ -233,10 +244,14 @@
       animation: rotate 1s ease-in-out;
       top: 30%;
 
+      @media($tablet) {
+        max-width: $image-width-tablet;
+        right: -$image-width-tablet/2;
+        top: 35%;
+      }
+
       @media($mobile) {
-        max-width: $image-width-mobile;
-        right: -$image-width-mobile/2;
-        top: 20%;
+        display: none;
       }
     }
 
@@ -282,6 +297,14 @@
       right: 0;
       left: 0;
       padding: $building-unit-x4 0;
+
+      @media ($tablet) {
+        padding: 2em 3em;
+      }
+
+      @media($mobile) {
+        padding: 2em;
+      }
     }
   }
 

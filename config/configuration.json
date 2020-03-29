@@ -8,6 +8,11 @@
       },
       "secure": false
     },
-    "from":"onesecond.connect@gmail.com"
+    "from":"onesecond.connect@gmail.com",
+    "attachments": [{
+      "filename": "logo.svg",
+      "path": "./assets/base-icons/logo.svg",
+      "cid": "logo"
+    }]
   }
 }

@@ -22,9 +22,11 @@
         >
           {{ text }}
         </h2>
-        <a class="button-o2 is-black invest-button">
+        <nuxt-link
+          to="/form"
+          class="button-o2 is-black invest-button">
           join one second
-        </a>
+        </nuxt-link>
       </div>
     </div>
   </div>
@@ -93,14 +95,19 @@
       display: flex;
       margin-top: -$devider-height - $building-unit-x12;
 
-      @media($mobile) {
+      @media($tablet) {
         flex-direction: column;
+        align-items: center;
+        margin-top: -$devider-height -$building-unit-x8;
+      }
+
+      @media ($mobile) {
         margin-top: 0;
       }
 
       &.is-reversed {
         flex-direction: row-reverse;
-        @media($mobile) {
+        @media($tablet) {
           flex-direction: column;
         }
 
@@ -115,7 +122,7 @@
 
       &-section {
         flex: 1;
-        @media($mobile) {
+        @media($tablet) {
           text-align: center;
           padding: 0 $building-unit;
         }

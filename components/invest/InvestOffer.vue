@@ -9,8 +9,7 @@
         <h2
           id="text"
           v-vpshow
-          class="h2 is-white with-shadow invest-offer-header"
-        >
+          class="h2 is-white with-shadow invest-offer-header">
           OUR GOAL IS TO CREATE CYBERSPACE FOR MUSIC
           COMMUNITY SO EVERYONE CAN SHARE THEIR
           TALENT AND BOOST UP MUSIC CAREER
@@ -61,9 +60,14 @@
     }
     &-header {
       max-width: 90%;
+      position: relative;
+      z-index: 2;
+      @media ($tablet) {
+        font-size: 42px;
+        max-width: 100%;
+      }
       @media($mobile) {
         font-size: 28px;
-        max-width: 100%;
       }
     }
 
@@ -71,8 +75,8 @@
       position: relative;
       padding: $building-unit-x6 0;
       background-color: $black;
-      @media($mobile) {
-        padding: $building-unit-x3;
+      @media($tablet) {
+        padding: $building-unit-x8 $building-unit-x3 $building-unit-x3 $building-unit-x3;
       }
     }
 

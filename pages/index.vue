@@ -61,6 +61,7 @@
 @import "../assets/styles/base/variables";
 
 .main {
+  overflow: hidden;
   @media($mobile) {
     overflow-x: hidden;
   }
@@ -93,8 +94,21 @@
     margin-top: 150px;
   }
 
+  &-database {
+    @media($tablet) {
+      margin-top: 450px;
+    }
+
+    @media($mobile) {
+      margin-top: 400px;
+    }
+  }
+
   &-mobile {
     margin-top: 250px;
+    @media ($tablet) {
+      margin-top: 100px;
+    }
     @media($mobile) {
       margin-top: 150px;
     }
@@ -102,6 +116,12 @@
 
   &-promo {
     margin-top: 100px;
+
+    @media ($tablet) {
+      min-height: auto;
+      margin-top: 50px;
+    }
+
     @media($mobile) {
       margin-top: 50px;
     }
@@ -109,6 +129,10 @@
 
   &-artists {
     margin-top: 100px;
+    @media ($desktop) {
+      margin-top: 50px;
+    }
+
     @media($mobile) {
       margin-top: 50px;
     }

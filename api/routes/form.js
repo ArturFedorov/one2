@@ -22,14 +22,14 @@ router.post('/submit', (req, res, next) => {
     subject: 'Joining One Second',
     html: emailConfig.generateMessageContent(
       'Joining One Second',
-      'Have an amazing experience',
+      'Hi',
       req.body.name
     )
   };
 
   emailConfig.send(mailOptions)
     .then(() => res.json(req.body))
-    .catch(() => res.status(500).send('Error occurred'));
+    .catch((error) => res.status(500).send('Error occurred - ', error));
 })
 
 module.exports = router;

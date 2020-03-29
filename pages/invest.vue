@@ -29,6 +29,9 @@
   .invest {
     &-offer {
       margin-top: -50px;
+      @media($tablet) {
+        margin-top: 0;
+      }
       @media($mobile) {
         margin-top: 0;
       }

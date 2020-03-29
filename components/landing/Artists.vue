@@ -41,9 +41,11 @@
           Use our coins to invest in music industry
         </p>
       </div>
-      <a class="button-o2 investors-button">
+      <nuxt-link
+        to="/form"
+        class="button-o2 investors-button">
         find out more
-      </a>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -70,9 +72,33 @@
       right: $building-unit-x12;
       top: calc(920px/2 - 380px/2);
 
-      @media($mobile) {
+      @media ($desktop) {
+        top: 240px;
+        right: $building-unit-x2;
+        .h1 {
+          font-size: 84px;
+          line-height: 84px;
+          max-width: 700px;
+        }
+      }
+
+      @media ($tablet) {
         top: 70px;
         right: $building-unit-x2;
+
+        .h1 {
+          font-size: 64px;
+          max-width: 400px;
+          line-height: 64px;
+          text-shadow: $h2-text-shadow-mobile;
+
+          &-reversed {
+            text-shadow: $h1-text-shadow-white-mobile;
+          }
+        }
+      }
+
+      @media($mobile) {
         line-height: 24px;
         max-width: 200px;
         .h1 {
@@ -93,12 +119,28 @@
       left: $building-unit-x12;
       line-height: $line-height;
 
-      @media($mobile) {
+      @media ($desktop) {
+        .h1 {
+          font-size: 84px;
+          line-height: 104px;
+        }
+      }
+
+      @media ($tablet) {
         top: 35%;
+        left: $building-unit-x8;
+        .h1 {
+          font-size: 48px;
+          line-height: 54px;
+        }
+      }
+
+      @media($mobile) {
         left: $building-unit-x4;
         line-height: 24px;
         .h1 {
           font-size: 24px;
+          line-height: 28px;
 
           &-reversed {
             text-shadow: $h1-text-shadow-black-mobile;
@@ -111,6 +153,16 @@
       position: absolute;
       bottom: 23%;
       left: $building-unit-x12 + $building-unit_x7;
+
+      @media ($desktop) {
+        bottom: 23%;
+      }
+
+      @media($tablet) {
+        left: $building-unit-x9;
+        bottom: 15%;
+      }
+
       @media($mobile) {
         bottom: 23%;
         left: $building-unit_x4;
@@ -120,7 +172,14 @@
         max-width: 800px;
         line-height: 100%;
         margin-bottom: $building-unit-x8;
+        @media ($tablet) {
+          font-size: $building-unit-x4;
+          margin-bottom: $building-unit-x4;
+          max-width: 600px;
+        }
+
         @media($mobile) {
+          margin-bottom: $building-unit-x8;
           font-size: $building-unit-x2;
           max-width: 200px;
         }
@@ -129,16 +188,32 @@
 
     &-list {
       margin-bottom: $building-unit-x12*2;
+      @media ($desktop) {
+        margin-bottom: $building-unit-x12;
+      }
+
       @media($mobile) {
         display: none;
       }
-      &-item:not(:last-child) {
-        margin-bottom: $building-unit-x2;
+
+      &-item {
+        &:not(:last-child) {
+          margin-bottom: $building-unit-x2;
+
+          @media ($tablet) {
+            font-size: 18px;
+            margin-bottom: $building-unit-x0_5;
+          }
+        }
+        @media ($tablet) {
+          font-size: 18px;
+          margin-bottom: $building-unit-x0_5;
+        }
       }
     }
 
     &-button {
-      @media($mobile) {
+      @media($tablet) {
         display: none;
       }
     }

@@ -31,9 +31,11 @@
             </p>
           </div>
           <div class="radio-button">
-            <a class="button-o2 is-white with-black">
+            <nuxt-link
+              to="/form"
+              class="button-o2 is-white with-black">
               join one second
-            </a>
+            </nuxt-link>
             <img
               class="radio-button-image"
               src="~/assets/icons/circles.svg"
@@ -83,6 +85,11 @@
       position: relative;
       margin-top: -4px;
       z-index: 0;
+
+      @media ($tablet) {
+        max-width: 30%;
+      }
+
       @media($mobile) {
         max-width: 50%;
       }
@@ -111,13 +118,20 @@
       right: 8%;
       top: $building-unit-x12;
       animation: slideUp 1s ease-in-out, opacity 1.5s ease-in-out;
-      @media($mobile) {
+
+      @media ($tablet) {
         top: $building-unit-x2;
         z-index: 1;
         right: 0;
 
         .radio-header {
           text-align: right;
+          padding-right: $building-unit-x4;
+        }
+      }
+
+      @media($mobile) {
+        .radio-header {
           padding-right: $building-unit-x2;
         }
       }
@@ -129,13 +143,13 @@
 
     &-list {
       margin-top: $building-unit-x11;
-      @media($mobile) {
+
+      @media ($tablet) {
         background-color: $black;
+        padding: $building-unit-x4;
         margin: $building-unit-x2 $building-unit-x2 0 $building-unit-x2;
         opacity: .9;
-        padding: $building-unit-x2;
       }
-
       &-item {
         margin-bottom: $building-unit-x4;
         @media($mobile) {
@@ -143,7 +157,7 @@
         }
 
         .text {
-          @media($mobile) {
+          @media($tablet) {
             line-height: 150%;
           }
         }

@@ -53,6 +53,10 @@
   @import "../../assets/styles/base/variables";
 
   .promo {
+    @media ($desktop) {
+      min-height: auto !important;
+    }
+
     @media($mobile) {
       padding: $building-unit-x2;
     }

@@ -131,7 +131,7 @@
     &-content {
       display: flex;
 
-      @media($mobile) {
+      @media($tablet) {
         flex-direction: column-reverse;
       }
     }
@@ -158,6 +158,11 @@
       flex: 1;
       padding: $building-unit-x2 $building-unit-x6;
       margin: $building-unit-x10 0;
+
+      @media ($tablet) {
+        padding: $building-unit-x2 $building-unit-x4;
+        margin: $building-unit-x6 0;
+      }
 
       @media($mobile) {
         padding: $building-unit-x2 $building-unit-x2;
@@ -195,7 +200,7 @@
       position: relative;
       padding: $building-unit-x10*3.5 0;
 
-      @media($mobile) {
+      @media($tablet) {
         padding: 0;
         flex-direction: column;
       }

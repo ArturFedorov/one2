@@ -34,9 +34,11 @@
           earning with every listen. We'll help you make sense
           of the data so you know exactly what to do next.
         </p>
-        <a class="button-o2 mobile-button">
+        <nuxt-link
+          to="/form"
+          class="button-o2 mobile-button">
           join one second
-        </a>
+        </nuxt-link>
       </div>
     </div>
   </div>
