@@ -77,6 +77,7 @@
       max-width: 600px;
       margin-top: $devider-height/2;
       margin-bottom: 120px;
+      padding-top: 10px;
 
       @media($mobile) {
         margin-top: $building-unit-x3;

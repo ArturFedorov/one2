@@ -7,7 +7,7 @@
     <div class="radio-content">
       <div class="container">
         <h1 class="h1 h1-white with-shadow is-uppercase radio-header">
-          One second
+          Onesecond.cc
         </h1>
         <h1 class="h1 h1-white with-shadow is-uppercase radio-header">
           is created
@@ -115,7 +115,7 @@
 
     &-content {
       position: absolute;
-      right: 8%;
+      right: 5%;
       top: $building-unit-x12;
       animation: slideUp 1s ease-in-out, opacity 1.5s ease-in-out;
 

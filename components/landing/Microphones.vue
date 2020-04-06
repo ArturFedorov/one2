@@ -25,7 +25,7 @@
         class="microphone-list-container"
       >
         <h2 class="h2 microphone-header">
-          EVERYONES WHO NEEDS TO
+          EVERYONE WHO WANTS TO
           BOOST UP A MUSIC CAREER
         </h2>
         <div class="list-o2 microphone-list">
@@ -63,12 +63,12 @@
       return {
         items: [
           'introduce yourself',
-          'upload your music videos or audio',
+          'upload your music video or audio',
           'get funding for recording,  shows and tours',
           'get free distribution',
           'get free promo via our social media',
           'connect with like-minds all over the world',
-          'get statistics and contact with fans'
+          'advanced options for experienced independent artists: funding for shows/ tours.'
         ]
       };
     }

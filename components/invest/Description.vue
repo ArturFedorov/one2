@@ -35,9 +35,9 @@
     },
     data () {
       return {
-        sectionOne: 'Now you get an opportunity to invest in artists you like and earn together',
+        sectionOne: 'Invest in artists you like and earn together',
         imageTwoUrl: require('~/assets/images/invest/announce.png'),
-        sectionTwo: 'Here we unite perspective beginners and experienced independent music artists',
+        sectionTwo: 'On this platform we represent starting and experienced artists',
         imageThreeUrl: require('~/assets/images/invest/funding.png'),
         sectionThree: 'Our team makes promo and helps with management',
         imageFourUrl: require('~/assets/images/invest/pick.png'),

@@ -10,7 +10,7 @@
           id="text"
           v-vpshow
           class="h2 is-white with-shadow invest-offer-header">
-          OUR GOAL IS TO CREATE CYBERSPACE FOR MUSIC
+          OUR GOAL IS TO CREATE ECOSYSTEM FOR MUSIC
           COMMUNITY SO EVERYONE CAN SHARE THEIR
           TALENT AND BOOST UP MUSIC CAREER
         </h2>
@@ -48,6 +48,11 @@
 
   .invest-offer {
     position: relative;
+
+    .container {
+      padding-top: 1em;
+    }
+
     &-bg {
       position: relative;
       z-index: -1;

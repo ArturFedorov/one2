@@ -17,7 +17,7 @@
       font-family: futura-pt;
       font-weight: $font-regular;
       font-size: $font-size-base;
-      line-height: 0;
+      line-height: 100%;
 
       @media ($mobile) {
         font-size: $building-unit-x2;

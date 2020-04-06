@@ -13,9 +13,15 @@
         >
       </div>
       <div class="footer-o2-links">
-        <a class="text is-white is-uppercase">About us</a>
-        <a class="text is-white is-uppercase">Artists</a>
-        <a class="text is-white is-uppercase">Invest</a>
+        <nuxt-link
+          to="/about"
+          class="text is-white is-uppercase">About us</nuxt-link>
+        <nuxt-link
+          to="/artists"
+          class="text is-white is-uppercase">Artists</nuxt-link>
+        <nuxt-link
+          to="/invest"
+          class="text is-white is-uppercase">Invest</nuxt-link>
       </div>
       <div class="footer-o2-rights">
         <p class="text is-white">

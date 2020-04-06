@@ -9,16 +9,15 @@
       </div>
       <div class="artists-header">
         <h1 class="h1 h1-white with-shadow is-uppercase">
-          Artists get up to
-          <span class="h1-reversed">90</span>
-          percent
+          Artists earn up to
+          <span class="h1-reversed">90</span>%
         </h1>
       </div>
     </div>
     <div class="investors-header">
       <h1 class="h1 with-shadow is-uppercase">
         Become an <br>
-        <span class="h1-reversed">investor</span> for young <br>
+        <span class="h1-reversed">investor</span> for fresh <br>
         or experienced artists
       </h1>
     </div>
@@ -29,7 +28,7 @@
       </h2>
       <div class="investors-list">
         <p class="text is-white is-medium investors-list-item">
-          Buy up to 50% in projects of fresh or experiencd artists
+          Buy up to 50% in projects of fresh or experienced artists
         </p>
         <p class="text is-white is-medium investors-list-item">
           Share risks with other investors
@@ -103,7 +102,7 @@
         max-width: 200px;
         .h1 {
           font-size: 24px;
-
+          line-height: 30px;
           &-reversed {
             text-shadow: $h1-text-shadow-white-mobile;
           }

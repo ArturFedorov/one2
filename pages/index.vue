@@ -4,7 +4,7 @@
       <div class="home">
         <div class="home-section left">
           <h2 class="h2 with-shadow">
-            ONE SECOND
+            ONESECOND.CC
           </h2>
           <p class="text home-text">
             New type of online services where artists can get professional support
@@ -96,7 +96,7 @@
 
   &-database {
     @media($tablet) {
-      margin-top: 450px;
+      margin-top: 650px;
     }
 
     @media($mobile) {
