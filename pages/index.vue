@@ -95,6 +95,10 @@
   }
 
   &-database {
+    @media($desktop) {
+      margin-top: 150px;
+    }
+
     @media($tablet) {
       margin-top: 650px;
     }

@@ -159,7 +159,7 @@
 
       @media($tablet) {
         left: $building-unit-x9;
-        bottom: 15%;
+        bottom: 20%;
       }
 
       @media($mobile) {

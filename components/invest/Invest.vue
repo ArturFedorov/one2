@@ -8,8 +8,7 @@
     <div
       id="offer"
       v-vpshow
-      class="invest-capture"
-    >
+      class="invest-capture">
       <h1 class="h1 h1-white with-shadow is-uppercase invest-header">
         One second
       </h1>
@@ -68,11 +67,18 @@
     }
 
     &-capture {
+      background-color: $black;
+      opacity: 0.9;
       position: absolute;
       top: 60%;
       width: 100%;
       text-align: center;
       animation: slideUp 1s ease-in-out, opacity 1.5s ease-in-out;
+
+      .h1 {
+        margin-top: 0.5em;
+      }
+
       @media($mobile) {
         top: 50%;
       }

@@ -60,44 +60,21 @@
           src="~/assets/icons/form-bg.svg"
         >
         <div class="card-content">
-          <h2 class="h2 is-white is-uppercase card-header">
-            Join us
-          </h2>
-          <div class="card-text">
-            <p class="text is-white is-light">
-              Become a partner of one second. Contribute to
-              unique single experience of new music community.
-            </p>
-          </div>
-          <div class="card-form">
-            <div class="input-o2 card-input">
-              <input
-                type="text"
-                placeholder="Your name"
-                class="input-o2-box"
-              >
-            </div>
-            <div class="input-o2">
-              <input
-                placeholder="Your email"
-                type="text"
-                class="input-o2-box"
-              >
-            </div>
-            <div class="card-form-checkbox">
-              <Checkbox
-                :checked="checked"
-                @checked="checked=!checked"
-              />
-              <span class="text is-white is-light card-form-checkbox-label">
-                I agree to share personal information
-              </span>
+          <div>
+            <h2 class="h2 is-white is-uppercase card-header">
+              Join us
+            </h2>
+            <div class="card-text">
+              <p class="text is-white is-light">
+                Become a partner of one second. Contribute to
+                unique single experience of new music community.
+              </p>
             </div>
           </div>
           <div class="card-button">
-            <a class="button-o2 is-small">
+            <nuxt-link to="/form" class="button-o2 is-small">
               join one second
-            </a>
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -107,12 +84,8 @@
 
 <script lang="ts">
   import Vue from 'vue';
-  import Checkbox from '../common/Checkbox/Checkbox.vue';
 
   export default Vue.extend({
-    components: {
-      Checkbox
-    },
     data () {
       return {
         checked: false
@@ -232,6 +205,10 @@
       top: 0;
       right: 0;
       height: 300px;
+
+      @media ($mobile) {
+        height: 150px;
+      }
     }
 
     &-bg-2 {
@@ -240,6 +217,10 @@
       bottom: 0;
       right: 0;
       max-height: 100%;
+
+      @media ($mobile) {
+        right: -10%;
+      }
     }
 
     &-button {
@@ -247,6 +228,10 @@
     }
     &-content {
       position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
     }
     &-header {
       line-height: 120%;
@@ -292,7 +277,6 @@
     &-text {
       display: flex;
       flex-direction: column;
-
       .text {
         line-height: 120%;
       }

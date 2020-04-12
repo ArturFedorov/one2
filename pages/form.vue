@@ -13,7 +13,9 @@
         Become a partner of one second. Contribute to unique single
         experience of new music community.
       </h2>
-      <div class="form-form">
+      <div
+        v-if="!showSubmit"
+        class="form-form">
         <div class="form-section">
           <p class="text is-bold form-section-header">
             Personal information
@@ -118,6 +120,20 @@
           </div>
         </div>
       </div>
+      <div
+        v-if="showSubmit"
+        class="form-confirmation">
+        <h2 class="h2 is-medium form-subheader">
+          Your info has been sent.
+        </h2>
+        <p>Let's have this experience!</p>
+
+        <a
+          class="button-o2 is-small"
+          @click="resetForm">
+          Send again
+        </a>
+      </div>
     </div>
     <div class="form-footer">
       <div class="container">
@@ -157,7 +173,8 @@
         birth: '',
         city: '',
         nameTouched: false,
-        emailTouched: false
+        emailTouched: false,
+        showSubmit: false
       };
     },
     // @ts-ignore
@@ -200,9 +217,21 @@
             // @ts-ignore
             this.youtube
           );
+          this.showSubmit = true;
         } catch (e) {
           console.log('Error', e);
+          this.showSubmit = true;
         }
+      },
+      resetForm () {
+        this.showSubmit = false;
+        this.facebook = '';
+        this.youtube = '';
+        this.birth = '';
+        this.city = '';
+        this.name = '';
+        this.email = '';
+        this.selectedCountry = 'Russian Federation';
       }
     },
     watch: {
@@ -235,6 +264,16 @@
 
     @media($mobile) {
       padding: 2em;
+    }
+
+    &-confirmation {
+      transition: all .4s;
+      margin-top: $building-unit-x10;
+
+      .button-o2 {
+        display: inline-block;
+        margin-top: $building-unit-x3;
+      }
     }
 
     &-bg {
