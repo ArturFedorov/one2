@@ -218,6 +218,13 @@
             this.youtube
           );
           this.showSubmit = true;
+          this.facebook = '';
+          this.youtube = '';
+          this.birth = '';
+          this.city = '';
+          this.name = '';
+          this.email = '';
+          this.selectedCountry = 'Russian Federation';
         } catch (e) {
           console.log('Error', e);
           this.showSubmit = true;
@@ -225,13 +232,6 @@
       },
       resetForm () {
         this.showSubmit = false;
-        this.facebook = '';
-        this.youtube = '';
-        this.birth = '';
-        this.city = '';
-        this.name = '';
-        this.email = '';
-        this.selectedCountry = 'Russian Federation';
       }
     },
     watch: {
